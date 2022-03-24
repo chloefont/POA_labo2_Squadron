@@ -1,0 +1,14 @@
+//
+// Created by cfont on 24.03.2022.
+//
+
+#ifndef POA_LABO2_SQUADRONS_STARDREADNOUGHT_H
+#define POA_LABO2_SQUADRONS_STARDREADNOUGHT_H
+
+
+class StarDreadnought {
+
+};
+
+
+#endif //POA_LABO2_SQUADRONS_STARDREADNOUGHT_H
