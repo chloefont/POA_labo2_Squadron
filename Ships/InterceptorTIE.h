@@ -5,9 +5,15 @@
 #ifndef POA_LABO2_SQUADRONS_INTERCEPTORTIE_H
 #define POA_LABO2_SQUADRONS_INTERCEPTORTIE_H
 
+#include "./Ship.h"
 
-class InterceptorTIE {
-
+class InterceptorTIE : Ship {
+public:
+   std::string getModel() const override;
+   double getWeight() const override;
+private:
+   static size_t counter;
+   static double maxSpeed;
 };
 
 

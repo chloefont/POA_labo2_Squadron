@@ -6,8 +6,18 @@
 #define POA_LABO2_SQUADRONS_SHUTTLE_H
 
 
-class Shuttle {
+#include <cstdlib>
+#include <string>
+#include "Cargo.h"
 
+class Shuttle : public Cargo {
+public:
+   std::string getModel() const override;
+   double getWeight() const override;
+   double getCargoMaxWeight() const override;
+private:
+   static size_t counter;
+   static double maxSpeed;
 };
 
 

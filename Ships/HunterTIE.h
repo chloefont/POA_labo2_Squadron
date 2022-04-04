@@ -6,8 +6,17 @@
 #define POA_LABO2_SQUADRONS_HUNTERTIE_H
 
 
-class HunterTIE {
+#include <cstdlib>
+#include <string>
+#include "Ship.h"
 
+class HunterTIE : public Ship {
+public:
+   std::string getModel() const override;
+   double getWeight() const override;
+private:
+   static size_t counter;
+   static double maxSpeed;
 };
 
 

@@ -3,3 +3,12 @@
 //
 
 #include "InterceptorTIE.h"
+using namespace std;
+
+string InterceptorTIE::getModel() const {
+   return "TIE/IN,";
+}
+
+double InterceptorTIE::getWeight() const {
+   return 5;
+}

@@ -6,8 +6,17 @@
 #define POA_LABO2_SQUADRONS_STARDREADNOUGHT_H
 
 
-class StarDreadnought {
+#include <cstdlib>
+#include <string>
+#include "Cargo.h"
 
+class StarDreadnought:Cargo {
+public:
+   std::string getModel() const override;
+   double getWeight() const override;
+private:
+   static size_t counter;
+   static double maxSpeed;
 };
 
 
