@@ -7,8 +7,8 @@
 
 #include "./Ship.h"
 
-const char* MODEL = "TIE/IN";
-const double WEIGHT = 5;
+static const char* MODEL = "TIE/IN";
+static const double WEIGHT = 5;
 
 class InterceptorTIE : Ship {
 public:

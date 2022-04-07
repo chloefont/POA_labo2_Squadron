@@ -10,9 +10,9 @@
 #include <string>
 #include "Cargo.h"
 
-const double WEIGHT = 360;
-const double MAX_WEIGHT = 80;
-const char* MODEL = "Lambda-class shuttle";
+static const double WEIGHT = 360;
+static const double MAX_WEIGHT = 80;
+static const char* MODEL = "Lambda-class shuttle";
 
 class Shuttle : public Cargo {
 public:
