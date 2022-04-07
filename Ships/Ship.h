@@ -5,6 +5,8 @@
 #ifndef POA_LABO2_SQUADRONS_SHIP_H
 #define POA_LABO2_SQUADRONS_SHIP_H
 
+#include <string>
+#include "Ship.h"
 
 class Ship {
 

@@ -21,10 +21,6 @@
       <child>57862</child>
       <parent>57329</parent>
     </inheritance>
-    <entity entityType="CLASS" id="57862" isAbstract="false" name="Cargo" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="false" name="cargoMaxWeight" type="double" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="false" name="cargoWeight" type="double" visibility="PRIVATE"/>
-    </entity>
     <association aggregation="NONE" direction="BIDIRECTIONAL" id="57391" name="chef d'escadrille">
       <role componentId="57328" name="" visibility="PRIVATE">
         <multiplicity>
@@ -53,18 +49,22 @@
         </multiplicity>
       </role>
     </association>
+    <entity entityType="CLASS" id="57862" isAbstract="false" name="Cargo" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="cargoMaxWeight" type="double" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="false" name="cargoWeight" type="double" visibility="PRIVATE"/>
+    </entity>
     <entity entityType="CLASS" id="57328" isAbstract="false" name="Squadron" visibility="PUBLIC">
       <attribute const="false" defaultValue="" isStatic="false" name="name" type="string" visibility="PRIVATE"/>
       <method is-constructor="true" isAbstract="false" isStatic="false" name="Squadron" returnType="" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="name" type="string"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="addShipSelf" returnType="void" view="DEFAULT" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="addShipSelf" returnType="&amp;Squadron" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="ship" type="const_Ship&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="addShipStatic" returnType="Squadron" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="ship" type="const_Ship&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="removeShipSelf" returnType="void" view="DEFAULT" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="removeShipSelf" returnType="&amp;Squadron" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="ship" type="const_Ship&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="removeShipStatic" returnType="Squadron" view="DEFAULT" visibility="PUBLIC">
@@ -96,10 +96,10 @@
         <variable const="false" name="ship" type="const_Ship&amp;"/>
       </method>
     </entity>
-    <entity entityType="CLASS" id="57329" isAbstract="false" name="Ship" visibility="PUBLIC">
+    <entity entityType="CLASS" id="57329" isAbstract="true" name="Ship" visibility="PUBLIC">
       <attribute const="false" defaultValue="" isStatic="false" name="surname" type="sring" visibility="PRIVATE"/>
       <attribute const="false" defaultValue="" isStatic="false" name="model" type="string" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="false" name="nb" type="size_t" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="false" name="no" type="size_t" visibility="PRIVATE"/>
       <attribute const="false" defaultValue="" isStatic="false" name="maxSpeed" type="double" visibility="PRIVATE"/>
       <method isAbstract="false" isStatic="false" name="getId" returnType="String" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="getConso" returnType="double" view="DEFAULT" visibility="PUBLIC">
@@ -152,13 +152,13 @@
       <multipliciteAssociation>
         <x>705</x>
         <y>119</y>
-        <w>21</w>
+        <w>22</w>
         <h>16</h>
       </multipliciteAssociation>
       <multipliciteAssociation>
         <x>893</x>
         <y>120</y>
-        <w>21</w>
+        <w>22</w>
         <h>16</h>
       </multipliciteAssociation>
     </relationView>
