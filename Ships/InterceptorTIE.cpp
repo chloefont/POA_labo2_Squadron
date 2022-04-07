@@ -6,9 +6,9 @@
 using namespace std;
 
 string InterceptorTIE::getModel() const {
-   return "TIE/IN,";
+   return MODEL;
 }
 
 double InterceptorTIE::getWeight() const {
-   return 5;
+   return WEIGHT;
 }

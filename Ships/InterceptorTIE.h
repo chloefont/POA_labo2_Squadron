@@ -7,6 +7,9 @@
 
 #include "./Ship.h"
 
+const char* MODEL = "TIE/IN";
+const double WEIGHT = 5;
+
 class InterceptorTIE : Ship {
 public:
    std::string getModel() const override;

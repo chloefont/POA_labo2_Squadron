@@ -10,6 +10,9 @@
 #include <string>
 #include "Cargo.h"
 
+const double WEIGHT = 9e9;
+const char* MODEL = "Super-class Star Destroyer";
+
 class StarDreadnought:Cargo {
 public:
    std::string getModel() const override;

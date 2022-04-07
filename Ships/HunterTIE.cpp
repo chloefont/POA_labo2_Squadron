@@ -5,9 +5,9 @@
 #include "HunterTIE.h"
 
 std::string HunterTIE::getModel() const {
-   return " TIE/LN,";
+   return MODEL;
 }
 
 double HunterTIE::getWeight() const {
-   return 6;
+   return WEIGHT;
 }

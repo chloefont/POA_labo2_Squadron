@@ -5,13 +5,13 @@
 #include "Shuttle.h"
 
 std::string Shuttle::getModel() const {
-   return "Lambda-class shuttle";
+   return MODEL;
 }
 
 double Shuttle::getWeight() const {
-   return 360 + getCargoCurrentWeight();
+   return WEIGHT + getCargoCurrentWeight();
 }
 
 double Shuttle::getCargoMaxWeight() const {
-   return 80;
+   return MAX_WEIGHT;
 }

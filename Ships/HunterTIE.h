@@ -10,6 +10,9 @@
 #include <string>
 #include "Ship.h"
 
+const char* MODEL = "TIE/LN";
+const double WEIGHT = 6;
+
 class HunterTIE : public Ship {
 public:
    std::string getModel() const override;
