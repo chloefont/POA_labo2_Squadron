@@ -5,9 +5,14 @@
 #ifndef POA_LABO2_SQUADRONS_CARGO_H
 #define POA_LABO2_SQUADRONS_CARGO_H
 
+#include "../Ship.h"
 
-class Cargo {
-
+class Cargo : Ship{
+public:
+   double getCargoCurrentWeight() const;
+private:
+    virtual double getCargoMaxWeight() const = 0;
+    double cargoCurrentWeight;
 };
 
 

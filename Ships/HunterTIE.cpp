@@ -3,3 +3,11 @@
 //
 
 #include "HunterTIE.h"
+
+std::string HunterTIE::getModel() const {
+   return MODEL;
+}
+
+double HunterTIE::getWeight() const {
+   return WEIGHT;
+}

@@ -3,3 +3,7 @@
 //
 
 #include "Cargo.h"
+
+double Cargo::getCargoCurrentWeight() const {
+   return cargoCurrentWeight;
+}
