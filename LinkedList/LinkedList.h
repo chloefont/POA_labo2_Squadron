@@ -73,7 +73,7 @@ void LinkedList<T>::remove(T value) {
 template<typename T>
 LinkedList<T>::LinkedList(const LinkedList &other) {
    Node* current = other.beforeFirst.next;
-   while (&current != nullptr) {
+   while (current != nullptr) {
       pushFront(current->value);
       current = current->next;
    }

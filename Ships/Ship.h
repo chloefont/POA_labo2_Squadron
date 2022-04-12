@@ -20,8 +20,11 @@ public:
 
    virtual double getWeight() const = 0;
 
+   void setNickname(const std::string& nickname);
+
 protected:
-   Ship(std::string nickname, size_t no);
+   // TODO const string& ?
+   Ship(size_t no, const std::string& nickname);
 
 private:
    std::string nickname;

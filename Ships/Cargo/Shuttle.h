@@ -10,18 +10,21 @@
 #include <string>
 #include "Cargo.h"
 
-static const double WEIGHT = 360;
-static const double MAX_WEIGHT = 80;
-static const char* MODEL = "Lambda-class shuttle";
-
 class Shuttle : public Cargo {
 public:
+   Shuttle(const std::string& nickname = "", double cargoWeight = 0);
+
    std::string getModel() const override;
+
    double getWeight() const override;
+
    double getCargoMaxWeight() const override;
 private:
    static size_t counter;
    static double maxSpeed;
+   static const double WEIGHT;
+   static const double MAX_WEIGHT;
+   static const std::string MODEL;
 };
 
 

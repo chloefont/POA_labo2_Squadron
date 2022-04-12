@@ -7,9 +7,14 @@
 
 #include "../Ship.h"
 
-class Cargo : Ship{
+// TODO abstraite ?
+class Cargo : Ship {
 public:
    double getCargoCurrentWeight() const;
+
+protected:
+   Cargo(size_t number, const std::string& nickname = "", double cargoWeight = 0);
+
 private:
     virtual double getCargoMaxWeight() const = 0;
     double cargoCurrentWeight;

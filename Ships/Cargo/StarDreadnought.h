@@ -10,16 +10,18 @@
 #include <string>
 #include "Cargo.h"
 
-static const double WEIGHT = 9e9;
-static const char* MODEL = "Super-class Star Destroyer";
-
 class StarDreadnought:Cargo {
 public:
+   StarDreadnought(std::string nickname = "", double cargoWeight = 0);
+
    std::string getModel() const override;
+
    double getWeight() const override;
 private:
    static size_t counter;
    static double maxSpeed;
+   static const double WEIGHT;
+   static const std::string MODEL;
 };
 
 

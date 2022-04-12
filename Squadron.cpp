@@ -8,8 +8,8 @@ using namespace std;
 
 Squadron::Squadron(string name) : name(name), ships() {}
 
-Squadron::Squadron(const Squadron &other) : name(other.name), ships(other.ships),
-leader(other.leader) {}
+Squadron::Squadron(const Squadron &other) : name(other.name), leader(other.leader),
+ships(other.ships) {}
 
 Squadron Squadron::addShipStatic(const Ship &ship) {
    Squadron newSquadron(*this);
@@ -37,4 +37,23 @@ Ship &Squadron::getShip(size_t index) const {
    return *ships.get(index);
 }
 
+Squadron &Squadron::operator+=(const Ship &ship) {
+   return addShipSelf(ship);
+}
+
+Squadron &Squadron::operator-=(const Ship &ship) {
+   return removeShipSelf(ship);
+}
+
+void Squadron::setName(std::string name) {
+   this->name = name;
+}
+
+void Squadron::setLeader(const Ship& ship) {
+   leader = (Ship*) &ship;
+}
+
+void Squadron::removeLeader() {
+   leader = nullptr;
+}
 

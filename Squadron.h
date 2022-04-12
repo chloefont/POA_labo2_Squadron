@@ -15,7 +15,12 @@ class Squadron {
 public:
    Squadron& operator+=(const Ship& ship);
 
-   Squadron(std::string name);
+   Squadron& operator-=(const Ship& ship);
+
+   // TODO: implement
+   Ship& operator[](size_t index);
+
+   explicit Squadron(std::string name);
 
    Squadron(const Squadron& other);
 
@@ -28,9 +33,18 @@ public:
    Squadron removeShipStatic(const Ship& ship);
 
    Ship& getShip(size_t index) const;
+
+   // TODO
+   double getConsommation(double dist, double speed) const;
+
+   void setLeader(const Ship& ship);
+
+   void setName(std::string name);
+
+   void removeLeader();
 private:
    std::string name;
-   Squadron* leader = nullptr;
+   Ship* leader;
    LinkedList<Ship*> ships;
 };
 

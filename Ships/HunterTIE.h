@@ -10,16 +10,18 @@
 #include <string>
 #include "Ship.h"
 
-static const char* MODEL = "TIE/LN";
-static const double WEIGHT = 6;
-
 class HunterTIE : public Ship {
 public:
+   explicit HunterTIE(const std::string& nickname = "");
+
    std::string getModel() const override;
+
    double getWeight() const override;
 private:
    static size_t counter;
    static double maxSpeed;
+   static const char* MODEL;
+   static const double WEIGHT;
 };
 
 

@@ -7,16 +7,16 @@
 
 #include "./Ship.h"
 
-static const char* MODEL = "TIE/IN";
-static const double WEIGHT = 5;
-
 class InterceptorTIE : Ship {
 public:
+   explicit InterceptorTIE(const std::string& nickname = "");
    std::string getModel() const override;
    double getWeight() const override;
 private:
    static size_t counter;
    static double maxSpeed;
+   static const char* MODEL;
+   static const double WEIGHT;
 };
 
 

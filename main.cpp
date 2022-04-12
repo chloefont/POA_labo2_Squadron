@@ -7,12 +7,19 @@
 #include "Ships/InterceptorTIE.h"
 #include "Ships/Ship.h"
 
+using namespace std;
+
 int main() {
    HunterTIE blackLeader;
    blackLeader.setNickname("Black leader");
    HunterTIE blackTwo;
-   Shuttle shuttle(23.4);
+   //Shuttle shuttle(23.4);
 
-   Squadron squadron("Black Squadron");
+   Squadron squad("Black Squadron");
+   squad += blackLeader;
+   squad += blackTwo;
+   //squad += shuttle;
+   squad.setLeader(blackLeader);
+   //cout << squad << endl;
    return 0;
 }
