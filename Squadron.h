@@ -9,10 +9,18 @@
 #include "Ships/Ship.h"
 #include "LinkedList/LinkedList.h"
 
+class Squadron;
 
+Squadron operator+(const Squadron& squad, const Squadron& ship);
+Squadron operator-(const Squadron& squad, const Squadron& ship);
+std::ostream& operator<<(std::ostream& os, const Squadron& squad);
 
 class Squadron {
 public:
+   friend Squadron operator+(const Squadron& squad, const Ship& ship);
+   friend Squadron operator-(const Squadron& squad, const Ship& ship);
+   friend std::ostream& operator<<(std::ostream& os, const Squadron& squad);
+
    Squadron& operator+=(const Ship& ship);
 
    Squadron& operator-=(const Ship& ship);
@@ -43,6 +51,10 @@ public:
 
    void removeLeader();
 private:
+   double getMaxSpeed() const ;
+
+   double getTotalWeight() const;
+
    std::string name;
    Ship* leader;
    LinkedList<Ship*> ships;

@@ -20,6 +20,6 @@ int main() {
    squad += blackTwo;
    //squad += shuttle;
    squad.setLeader(blackLeader);
-   //cout << squad << endl;
+   cout << squad << endl;
    return 0;
 }

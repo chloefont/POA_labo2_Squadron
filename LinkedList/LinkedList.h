@@ -29,9 +29,13 @@ public:
 
    T get(size_t index) const;
 
-   Iterator<T> begin() noexcept;
+   Iterator<T> begin() const noexcept;
 
    size_t getSize() const;
+
+   Iterator<T> end() const noexcept;
+
+   bool empty() const noexcept;
 
 private:
    struct Node {
@@ -100,7 +104,7 @@ size_t LinkedList<T>::getSize() const {
 }
 
 template<typename T>
-Iterator<T> LinkedList<T>::begin() noexcept {
+Iterator<T> LinkedList<T>::begin() const noexcept {
    return Iterator<T>(beforeFirst.next);
 }
 
@@ -112,6 +116,21 @@ std::ostream& operator<<(std::ostream& os, const LinkedList<T>& list) {
       current = current->next;
    }
    return os;
+}
+
+template<typename T>
+Iterator<T> LinkedList<T>::end() const noexcept {
+   Node *current = beforeFirst.next;
+   while (current->next != nullptr) {
+      current = current->next;
+   }
+   Iterator<T> it = (Iterator<T>) current;
+   return ++it;
+}
+
+template<typename T>
+bool LinkedList<T>::empty() const noexcept {
+   return begin() == end();
 }
 
 #endif //POA_LABO2_SQUADRONS_LINKEDLIST_H

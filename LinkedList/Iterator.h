@@ -21,12 +21,12 @@ public:
    Iterator() : current(nullptr) {}
 
    Iterator& operator++ () {
-      current = current->suivant;
+      current = current->next;
       return *this;
    }
 
    Iterator operator++ (int) {
-      auto tmp{*this};
+      auto tmp(*this);
       operator++();
       return tmp;
    }
@@ -40,7 +40,7 @@ public:
    }
 
    T & operator*() {
-      return current->valeur;
+      return current->value;
    }
 };
 
