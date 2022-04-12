@@ -7,6 +7,7 @@
 
 #include <cstddef>
 #include <stdexcept>
+#include "iostream"
 #include "Iterator.h"
 
 template<typename T>
@@ -112,7 +113,7 @@ template<typename T>
 std::ostream& operator<<(std::ostream& os, const LinkedList<T>& list) {
    auto current = list.beforeFirst.next;
    while (current != nullptr) {
-      os << current->value << " ";
+      os << current->value << std::endl;
       current = current->next;
    }
    return os;

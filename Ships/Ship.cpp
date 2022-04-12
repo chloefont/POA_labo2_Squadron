@@ -4,6 +4,8 @@
 
 #include "Ship.h"
 #include <cmath>
+#include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -25,6 +27,20 @@ double Ship::getSpeed() const {
 
 void Ship::setNickname(const std::string& nickname) {
    this->nickname = nickname;
+}
+
+std::ostream &operator<<(ostream &os, const Ship &ship) {
+   os << ship.toString();
+   return os;
+}
+
+std::string Ship::toString() const {
+   ostringstream oss;
+   oss << getId() << endl
+       << "\tweight : " << getWeight() << " tons" << endl
+       << "\tmax speed : " << getSpeed() << " MGLT" << endl;
+
+   return oss.str();
 }
 
 

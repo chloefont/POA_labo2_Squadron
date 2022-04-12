@@ -7,9 +7,15 @@
 
 #include <string>
 
+class Ship;
+
+std::ostream& operator<<(std::ostream& os, const Ship& ship);
+
 class Ship {
 
 public:
+   friend std::ostream& operator<<(std::ostream& os, const Ship& ship);
+
    std::string getId() const;
 
    double getConsumption(double distance) const;
@@ -21,6 +27,8 @@ public:
    virtual double getWeight() const = 0;
 
    void setNickname(const std::string& nickname);
+
+   std::string toString() const;
 
 protected:
    // TODO const string& ?

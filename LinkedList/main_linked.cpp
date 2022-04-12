@@ -17,7 +17,11 @@ int main() {
 
    cout << list.getSize() << endl;
 
-   cout << list << endl;
+   Iterator<int> i = list.begin();
+   while (i != list.end()) {
+      cout << *i << " " << endl;
+      ++i;
+   }
 
    return 0;
 }

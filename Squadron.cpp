@@ -27,20 +27,19 @@ std::ostream &operator<<(ostream &os, const Squadron &squad) {
       << "\ttotal weight : " << squad.getTotalWeight() << "tons" << endl;
 
    if (squad.leader != nullptr) {
-      os << "-- Leader:" << endl
+      os << endl << "-- Leader:" << endl
          << squad.leader->getId() << endl
          << "\tweight : " << squad.leader->getWeight() << endl
          << "\tmax speed : " << squad.leader->getSpeed() << " MGLT" << endl;
    }
 
-   os << "-- Members:" << endl;
+   os << endl << "-- Members:" << endl;
    Iterator<Ship*> it = squad.ships.begin();
    while (it != squad.ships.end()) {
       if (*it != squad.leader) {
-         os << (*it)->getId() << endl
-            << "\tweight : " << (*it)->getWeight() << endl
-            << "\tmax speed : " << (*it)->getSpeed() << " MGLT" << endl;
+         os <<(*it)->toString() << endl;
       }
+      it++;
    }
 
    return os;
