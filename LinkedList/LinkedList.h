@@ -10,15 +10,18 @@
 #include "Iterator.h"
 
 template<typename T>
+std::ostream& operator<<(std::ostream& os, const LinkedList<T>& list);
+
+template<typename T>
 class LinkedList {
 public:
    friend class Iterator<T>;
 
+   friend std::ostream& operator<< <T>(std::ostream& os, const LinkedList<T>& list);
+
    LinkedList();
 
    LinkedList(const LinkedList& other);
-
-   void insert_after(Iterator<T> position, T valeur);
 
    void pushFront(T value);
 
@@ -43,17 +46,6 @@ private:
 template<typename T>
 LinkedList<T>::LinkedList() : beforeFirst{T(), nullptr}, size(0) {}
 
-//template<typename T>
-//void insert_after(Iterator<T> position, T valeur) {
-//   Node *courant = position.m;
-//   value_type object = value_type(valeur);
-//
-//   auto NouveauMaillon = new(std::nothrow) Maillon{value_type(object),
-//                                                   courant->suivant};
-//   if (NouveauMaillon == NULL) return delete NouveauMaillon;
-//   courant->suivant = NouveauMaillon;
-//}
-
 template<typename T>
 void LinkedList<T>::pushFront(T value) {
    Node* newNode = new Node{value, beforeFirst.next};
@@ -64,24 +56,26 @@ void LinkedList<T>::pushFront(T value) {
 template<typename T>
 void LinkedList<T>::remove(T value) {
    Node* current = beforeFirst.next;
-   Node previous = beforeFirst;
+   Node* previous = &beforeFirst;
 
    while (current != nullptr) {
       if (current->value == value) {
-         previous.next = current->next;
+         previous->next = current->next;
+         delete current;
+         size--;
+         return;
       }
       previous = current;
       current = current->next;
    }
-   size--;
 }
 
 template<typename T>
 LinkedList<T>::LinkedList(const LinkedList &other) {
-   Node current = other.beforeFirst.next;
+   Node* current = other.beforeFirst.next;
    while (&current != nullptr) {
-      pushFront(current.value);
-      current = current.next;
+      pushFront(current->value);
+      current = current->next;
    }
 }
 
@@ -91,13 +85,13 @@ T LinkedList<T>::get(size_t index) const {
       throw std::out_of_range("Index out of range");
    }
 
-   Node current = beforeFirst.next;
+   Node* current = beforeFirst.next;
    size_t i = 0;
    while (i < index) {
-      current = current.next;
+      current = current->next;
       i++;
    }
-   return current.value;
+   return current->value;
 }
 
 template<typename T>
@@ -110,5 +104,14 @@ Iterator<T> LinkedList<T>::begin() noexcept {
    return Iterator<T>(beforeFirst.next);
 }
 
+template<typename T>
+std::ostream& operator<<(std::ostream& os, const LinkedList<T>& list) {
+   auto current = list.beforeFirst.next;
+   while (current != nullptr) {
+      os << current->value << " ";
+      current = current->next;
+   }
+   return os;
+}
 
 #endif //POA_LABO2_SQUADRONS_LINKEDLIST_H
