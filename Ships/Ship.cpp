@@ -3,8 +3,6 @@
 //
 
 #include "Ship.h"
-
-#include <utility>
 #include <cmath>
 
 using namespace std;

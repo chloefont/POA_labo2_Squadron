@@ -9,8 +9,12 @@
 #include "Ships/Ship.h"
 #include "LinkedList/LinkedList.h"
 
+
+
 class Squadron {
 public:
+   Squadron& operator+=(const Ship& ship);
+
    Squadron(std::string name);
 
    Squadron(const Squadron& other);

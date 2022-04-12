@@ -3,18 +3,13 @@
 //
 
 #include "Squadron.h"
-#include "Ships/Ship.h"
 
 using namespace std;
 
-Squadron::Squadron(string name) : name(name) , ships() {
-}
+Squadron::Squadron(string name) : name(name), ships() {}
 
-Squadron::Squadron(const Squadron &other) {
-   name = other.name;
-   ships = other.ships;
-   leader = other.leader;
-}
+Squadron::Squadron(const Squadron &other) : name(other.name), ships(other.ships),
+leader(other.leader) {}
 
 Squadron Squadron::addShipStatic(const Ship &ship) {
    Squadron newSquadron(*this);
