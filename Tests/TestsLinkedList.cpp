@@ -4,16 +4,30 @@
 
 #include <string>
 #include <cstring>
-#include "TestsLinkedList.h"
+#include "TestsLinkedList.hpp"
 
 using namespace std;
 
 string listToString(const LinkedList<int> &list) {
-    string result = "";
+    string result;
     for (size_t i = 0; i < list.getSize(); i++) {
         result += to_string(list.get(i)) + " ";
     }
     return result;
+}
+
+void CopyConstructorTest() {
+    LinkedList<int> list1;
+    list1.pushFront(1);
+    list1.pushFront(2);
+    list1.pushFront(3);
+    LinkedList<int> list2(list1);
+
+   string expected = "3 2 1 ";
+   string got = listToString(list2);
+   bool testOk = expected.compare(got) == 0;
+
+   printResults("copy constructor", expected, got, testOk);
 }
 
 void pushFrontTest() {
@@ -27,6 +41,19 @@ void pushFrontTest() {
    bool testPassed = expected.compare(got) == 0;
 
    printResults("push front", expected, got, testPassed);
+}
+
+void pushBackTest() {
+   LinkedList<int> list;
+   list.pushFront(1);
+   list.pushFront(3);
+   list.pushFront(6);
+
+   string expected = "6 3 1 ";
+   string got = listToString(list);
+   bool testPassed = expected.compare(got) == 0;
+
+   printResults("push back", expected, got, testPassed);
 }
 
 void removeIfExistsTest() {
@@ -213,4 +240,30 @@ void iteratorElementsNotEqualTest() {
 
     printResults("iterator elements not equal", to_string(expected), to_string(got),
     testPassed);
+}
+
+void findElementTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    bool expected = true;
+    bool got = list.isIn(6);
+    bool testPassed = expected == got;
+
+    printResults("isIn element", to_string(expected), to_string(got), testPassed);
+}
+
+void findElementNotInListsTest() {
+   LinkedList<int> list;
+   list.pushFront(1);
+   list.pushFront(3);
+   list.pushFront(6);
+
+   bool expected = false;
+   bool got = list.isIn(5);
+   bool testPassed = expected == got;
+
+   printResults("isIn element", to_string(expected), to_string(got), testPassed);
 }

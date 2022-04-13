@@ -7,15 +7,18 @@
 
 #include "../Ship.hpp"
 
-// TODO abstraite ?
+
 class Cargo : public Ship {
 public:
+
    /**
     * 
     * 
     * @return The current weight of the cargo.
     */
    double getCargoCurrentWeight() const;
+
+   std::string toString() const override;
 
 protected:
    /**
@@ -28,6 +31,8 @@ protected:
     */
    Cargo(size_t number, double speed, double
    cargoWeight = 0, std::string nickname = "");
+
+
 
 private:
    virtual double getCargoMaxWeight() const = 0;

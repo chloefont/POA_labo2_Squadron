@@ -1,4 +1,4 @@
-#include "TestsLinkedList.h"
+#include "TestsLinkedList.hpp"
 #include "TestsShips.hpp"
 
 using namespace std;
@@ -6,7 +6,9 @@ using namespace std;
 int main() {
    cout << "------ Linked List Tests" << endl;
 
+   CopyConstructorTest();
    pushFrontTest();
+   pushBackTest();
    removeIfExistsTest();
    removeIfDoesNotExistTest();
    getElementWithValidIndexTest();
@@ -18,6 +20,8 @@ int main() {
    iteratorAfterIncrementTest();
    iteratorElementsEqualTest();
    iteratorElementsNotEqualTest();
+   findElementTest();
+   findElementNotInListsTest();
 
    getModelInterceptorTIETest();
    getWeightInterceptorTIETest();

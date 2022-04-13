@@ -50,7 +50,8 @@ Squadron Squadron::addShipStatic(const Ship &ship) {
 }
 
 Squadron &Squadron::addShipSelf(const Ship &ship) {
-   ships.pushFront((Ship *) &ship);
+   if (!ships.isIn((Ship*) &ship))
+      ships.pushFront((Ship *) &ship);
    return *this;
 }
 

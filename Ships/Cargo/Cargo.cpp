@@ -2,6 +2,7 @@
 // Created by cfont on 24.03.2022.
 //
 
+#include <sstream>
 #include "Cargo.hpp"
 
 using namespace std;
@@ -12,4 +13,12 @@ cargoWeight, string nickname) :
 
 double Cargo::getCargoCurrentWeight() const {
    return cargoCurrentWeight;
+}
+
+string Cargo::toString() const {
+   ostringstream oss;
+   oss <<  Ship::toString()
+       << "\tcargo : " << getCargoCurrentWeight() << " tons (max : " <<
+       getCargoMaxWeight() << ")";
+   return oss.str();
 }
