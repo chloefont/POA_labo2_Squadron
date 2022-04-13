@@ -66,12 +66,14 @@ void LinkedList<T>::remove(T value) {
    while (current != nullptr) {
       if (current->value == value) {
          previous->next = current->next;
-         delete current;
+         Node* tmp = current;
+         current = tmp->next;
+         delete tmp;
          size--;
-         return;
+      } else {
+         previous = current;
+         current = current->next;
       }
-      previous = current;
-      current = current->next;
    }
 }
 

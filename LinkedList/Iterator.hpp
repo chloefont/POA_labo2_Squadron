@@ -38,7 +38,7 @@ public:
    }
 
    bool operator!=(const Iterator &i) {
-      return current != i.current;
+      return !operator==(i);
    }
 
    T &operator*() {

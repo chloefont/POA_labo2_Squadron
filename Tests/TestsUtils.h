@@ -7,7 +7,7 @@
 
 #include <string>
 
-void printResults(std::string testName, const std::string& expected, std::string
-got);
+void printResults(const std::string& testName, const std::string& expected,
+                  const std::string& got, bool testOk);
 
 #endif //POA_LABO2_SQUADRONS_TESTSUTILS_H
