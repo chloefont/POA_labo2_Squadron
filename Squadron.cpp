@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Squadron::Squadron(string name) : name(name), ships(), leader(nullptr) {}
+Squadron::Squadron(string name) : name(name), leader(nullptr), ships() {}
 
 Squadron::Squadron(const Squadron &other) : name(other.name), leader(other.leader),
                                             ships(other.ships) {}
