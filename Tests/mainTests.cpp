@@ -1,5 +1,5 @@
 #include "TestsLinkedList.hpp"
-#include "TestsSquadron.h"
+#include "TestsSquadron.hpp"
 #include "TestsShips.hpp"
 
 using namespace std;

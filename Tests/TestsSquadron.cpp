@@ -3,10 +3,10 @@
 #include <cmath>
 #include <sstream>
 
-#include "TestsSquadron.h"
+#include "TestsSquadron.hpp"
 #include "../Squadron.hpp"
 #include "../Ships/HunterTIE.hpp"
-#include "TestsUtils.h"
+#include "TestsUtils.hpp"
 #include "../Ships/Cargo/Shuttle.hpp"
 
 using namespace std;

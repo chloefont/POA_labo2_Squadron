@@ -8,7 +8,7 @@
 #include <limits>
 
 #include "TestsShips.hpp"
-#include "TestsUtils.h"
+#include "TestsUtils.hpp"
 #include "../Ships/InterceptorTIE.hpp"
 #include "../Ships/HunterTIE.hpp"
 #include "../Ships/Cargo/Shuttle.hpp"

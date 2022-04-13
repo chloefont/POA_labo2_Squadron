@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <cstdlib>
-#include "TestsUtils.h"
+#include "TestsUtils.hpp"
 
 using namespace std;
 

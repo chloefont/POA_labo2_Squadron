@@ -133,7 +133,6 @@ double Squadron::getConsumption(double dist, double speed) const {
    return totalConsumption;
 }
 
-// TODO faut pouvoir le modifier ?
 const Ship &Squadron::operator[](size_t index) const {
    return getShip(index);
 }
