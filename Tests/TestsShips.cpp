@@ -43,7 +43,7 @@ void operatorOStreamInterceptorTIETest() {
    stringstream expected;
    expected << ship.getId() << endl
             << "\tweight : " << ship.getWeight() << " tons" << endl
-            << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl;
+            << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl;
 
    stringstream got;
    got << ship;
@@ -82,7 +82,7 @@ void getSpeedInterceptorTIETest() {
    double got = ship.getSpeed();
    bool testPassed = got == expected;
 
-   printResults("get speed", to_string(expected), to_string(got), testPassed);
+   printResults("get MAX_SPEED", to_string(expected), to_string(got), testPassed);
 }
 
 void setNicknameInterceptorTIETest() {
@@ -104,7 +104,7 @@ void toStringInterceptorTIETest() {
    ostringstream expected;
    expected << ship.getId() << endl
        << "\tweight : " << ship.getWeight() << " tons" << endl
-       << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl;
+       << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl;
    string got = ship.toString();
    bool testPassed = got == expected.str();
 
@@ -138,7 +138,7 @@ void operatorOStreamHunterTIETest() {
    stringstream expected;
    expected << ship.getId() << endl
             << "\tweight : " << ship.getWeight() << " tons" << endl
-            << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl;
+            << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl;
 
    stringstream got;
    got << ship;
@@ -177,7 +177,7 @@ void getSpeedHunterTIETest() {
    double got = ship.getSpeed();
    bool testPassed = got == expected;
 
-   printResults("get speed", to_string(expected), to_string(got), testPassed);
+   printResults("get MAX_SPEED", to_string(expected), to_string(got), testPassed);
 }
 
 void setNicknameHunterTIETest() {
@@ -199,7 +199,7 @@ void toStringHunterTIETest() {
    ostringstream expected;
    expected << ship.getId() << endl
        << "\tweight : " << ship.getWeight() << " tons" << endl
-       << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl;
+       << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl;
    string got = ship.toString();
    bool testPassed = got == expected.str();
 
@@ -239,7 +239,7 @@ void getCargoCurrentWeightStarDreadnoughtTest() {
 }
 
 void getCargoMaxWeightStarDreadnoughtTest() {
-   double weight = numeric_limits<double>::infinity();
+   double weight = 250e3;
    StarDreadnought ship(weight,"name");
 
    double expected = weight;
@@ -256,7 +256,7 @@ void operatorOStreamStarDreadnoughtTest() {
    stringstream expected;
    expected << ship.getId() << endl
             << "\tweight : " << ship.getWeight() << " tons" << endl
-            << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl
+            << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl
             << "\tcargo : " << ship.getCargoCurrentWeight() << " tons (max : " <<
             ship.getCargoMaxWeight() << ")";
 
@@ -297,7 +297,7 @@ void getSpeedStarDreadnoughtTest() {
    double got = ship.getSpeed();
    bool testPassed = got == expected;
 
-   printResults("get speed", to_string(expected), to_string(got), testPassed);
+   printResults("get MAX_SPEED", to_string(expected), to_string(got), testPassed);
 }
 
 void setNicknameStarDreadnoughtTest() {
@@ -319,7 +319,7 @@ void toStringStarDreadnoughtTest() {
    ostringstream expected;
    expected << ship.getId() << endl
        << "\tweight : " << ship.getWeight() << " tons" << endl
-       << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl
+       << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl
       << "\tcargo : " << ship.getCargoCurrentWeight() << " tons (max : " <<
       ship.getCargoMaxWeight() << ")";
    string got = ship.toString();
@@ -376,7 +376,7 @@ void operatorOStreamShuttleTest() {
    stringstream expected;
    expected << ship.getId() << endl
             << "\tweight : " << ship.getWeight() << " tons" << endl
-            << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl
+            << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl
       << "\tcargo : " << ship.getCargoCurrentWeight() << " tons (max : " <<
       ship.getCargoMaxWeight() << ")";
 
@@ -417,7 +417,7 @@ void getSpeedShuttleTest() {
    double got = ship.getSpeed();
    bool testPassed = got == expected;
 
-   printResults("get speed", to_string(expected), to_string(got), testPassed);
+   printResults("get MAX_SPEED", to_string(expected), to_string(got), testPassed);
 }
 
 void setNicknameShuttleTest() {
@@ -439,7 +439,7 @@ void toStringShuttleTest() {
    ostringstream expected;
    expected << ship.getId() << endl
        << "\tweight : " << ship.getWeight() << " tons" << endl
-       << "\tmax speed : " << ship.getSpeed() << " MGLT" << endl
+       << "\tmax MAX_SPEED : " << ship.getSpeed() << " MGLT" << endl
       << "\tcargo : " << ship.getCargoCurrentWeight() << " tons (max : " <<
       ship.getCargoMaxWeight() << ")";
    string got = ship.toString();

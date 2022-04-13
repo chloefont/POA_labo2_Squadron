@@ -23,7 +23,7 @@ Squadron operator-(const Squadron &squad, const Ship &ship) {
 
 std::ostream &operator<<(ostream &os, const Squadron &squad) {
    os << "Squadron " << squad.name << endl
-      << "\tmax speed : " << squad.getMaxSpeed() << " MGLT" << endl
+      << "\tmax MAX_SPEED : " << squad.getMaxSpeed() << " MGLT" << endl
       << "\ttotal weight : " << squad.getTotalWeight() << " tons" << endl;
 
    if (squad.leader != nullptr) {

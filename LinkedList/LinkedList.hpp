@@ -26,25 +26,78 @@ public:
 
    ~LinkedList();
 
+   /**
+    * @brief Add an element to the front of list.
+    * 
+    * @param value element to add
+    */
    void pushFront(T value);
 
+   /**
+    * @brief Add an element to the end of the list.
+    * 
+    * @param value element to add
+    */
    void pushBack(T value);
 
+   /**
+    * @brief Removes an element from the list.
+    * 
+    * @param value 
+    */
    void remove(T value);
 
+   /**
+    * @brief get an element at index.
+    * 
+    * @throw std::out_of_range if index is out of range
+    * @param index 
+    * @return T 
+    */
    T get(size_t index) const;
 
+   /**
+    * @brief Get an iterator of the first element of the list.
+    * 
+    * @return Iterator<T> 
+    */
    Iterator<T> begin() const noexcept;
 
+   /**
+    * @brief Get the Size of the list
+    * 
+    * @return size_t 
+    */
    size_t getSize() const;
 
+   /**
+    * @brief Get an iterator of the last element + 1 of the list.
+    * 
+    * @return Iterator<T> 
+    */
    Iterator<T> end() const noexcept;
 
+   /**
+    * @brief returns true if the list is empty.
+    * 
+    * @return true if the list is empty.
+    */
    bool empty() const noexcept;
 
+   /**
+    * @brief Check if the list contains an element.
+    * 
+    * @param value 
+    * @return true if the list contains the value.
+    */
    bool isIn(T value);
 
 private:
+
+   /**
+    * @brief Node that contains an element of the list and the next node.
+    * 
+    */
    struct Node {
       T value;
       Node *next;

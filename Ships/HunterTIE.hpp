@@ -35,7 +35,7 @@ public:
 
 private:
    static size_t counter;
-   static double speed;
+   static const double MAX_SPEED;
    static const char *MODEL;
    static const double WEIGHT;
 };

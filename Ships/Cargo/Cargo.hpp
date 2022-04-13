@@ -25,7 +25,7 @@ protected:
     * It's a constructor for the Cargo class
     * 
     * @param number The number of the ship.
-    * @param speed The speed of the ship.
+    * @param speed The MAX_SPEED of the ship.
     * @param cargoWeight The weight of the cargo currently on the ship.
     * @param nickname The name of the ship.
     */

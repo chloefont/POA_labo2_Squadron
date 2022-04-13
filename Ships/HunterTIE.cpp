@@ -7,11 +7,11 @@
 using namespace std;
 
 size_t HunterTIE::counter = 1;
-double HunterTIE::speed = 100;
+const double HunterTIE::MAX_SPEED = 100;
 const char *HunterTIE::MODEL = "TIE/LN";
 const double HunterTIE::WEIGHT = 6;
 
-HunterTIE::HunterTIE(string nickname) : Ship(counter++, speed, nickname) {}
+HunterTIE::HunterTIE(string nickname) : Ship(counter++, MAX_SPEED, nickname) {}
 
 std::string HunterTIE::getModel() const {
    return MODEL;

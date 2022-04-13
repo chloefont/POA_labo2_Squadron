@@ -32,9 +32,9 @@ public:
 
 private:
    static size_t counter;
-   static double speed;
-   static const char *MODEL;
-   static const double WEIGHT;
+   static const double MAX_SPEED;
+   static const std::string MODEL;
+   static const double SHIP_WEIGHT;
 };
 
 

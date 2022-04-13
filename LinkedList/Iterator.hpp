@@ -17,30 +17,62 @@ private:
 
    Node *current;
 
-   Iterator(Node *node) : current(node) {}
+   /**
+    * @brief Construct a new Iterator object
+    * 
+    * @param node on wich the iterator is pointing.
+    */
+   explicit Iterator(Node *node) : current(node) {}
 
 public:
    Iterator() : current(nullptr) {}
 
+   /**
+    * @brief Sets this iterator to the next element.
+    * 
+    * @return Iterator& next iterator.
+    */
    Iterator &operator++() {
       current = current->next;
       return *this;
    }
 
+   /**
+    * @brief Get a new iterator pointing to the next element.
+    * 
+    * @return Iterator 
+    */
    Iterator operator++(int) {
       auto tmp(*this);
       operator++();
       return tmp;
    }
 
+   /**
+    * @brief Check if this iterator is pointing to the same element as the other.
+    * 
+    * @param i other iterator
+    * @return true if the iterators are pointing to the same element.
+    */
    bool operator==(const Iterator &i) {
       return current == i.current;
    }
 
+   /**
+    * @brief check if this iterator is not pointing to the same element as the other.
+    * 
+    * @param i other iterator.
+    * @return true if the iterators are not pointing to the same element.
+    */
    bool operator!=(const Iterator &i) {
       return !operator==(i);
    }
 
+   /**
+    * @brief Get the value of the element the iterator is pointing to.
+    * 
+    * @return T& value of the element the iterator is pointing to.
+    */
    T &operator*() {
       return current->value;
    }

@@ -38,7 +38,7 @@ std::string Ship::toString() const {
    ostringstream oss;
    oss << getId() << endl
        << "\tweight : " << getWeight() << " tons" << endl
-       << "\tmax speed : " << getSpeed() << " MGLT" << endl;
+       << "\tmax MAX_SPEED : " << getSpeed() << " MGLT" << endl;
 
    return oss.str();
 }

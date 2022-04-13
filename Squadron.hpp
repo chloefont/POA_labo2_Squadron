@@ -83,10 +83,10 @@ public:
    Ship &getShip(size_t index) const;
 
    /**
-    * It calculates the total fuel consumption of the squadron for a given distance and speed
+    * It calculates the total fuel consumption of the squadron for a given distance and MAX_SPEED
     * 
     * @param dist The distance to travel.
-    * @param speed The speed of the squadron in MGLT.
+    * @param speed The MAX_SPEED of the squadron in MGLT.
     * @return The total consumption of the squadron in tons.
     */
    double getConsumption(double dist, double speed) const;
@@ -112,10 +112,10 @@ public:
 
 private:
    /**
-    * If the squadron is empty it returns 0 otherwise else it returns the speed of the slowest ship in the
+    * If the squadron is empty it returns 0 otherwise else it returns the MAX_SPEED of the slowest ship in the
     * squadron.
     * 
-    * @return The maximum speed that the squadron can have.
+    * @return The maximum MAX_SPEED that the squadron can have.
     */
    double getMaxSpeed() const;
 

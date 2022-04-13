@@ -28,15 +28,15 @@ public:
     * The consumption of a ship.
     * 
     * @param distance the distance the ship has traveled in mio. km.
-    * @param currentSpeed The current speed of the ship.
+    * @param currentSpeed The current MAX_SPEED of the ship.
     * @return The consumption of the ship.
     */
    double getConsumption(double distance, double currentSpeed) const;
 
    /**
-    * GetSpeed returns the value of the speed data member.
+    * GetSpeed returns the value of the MAX_SPEED data member.
     * 
-    * @return The speed of the ship.
+    * @return The MAX_SPEED of the ship.
     */
    double getSpeed() const;
 
@@ -60,12 +60,14 @@ public:
     */
    virtual std::string toString() const;
 
+   virtual ~Ship() = default;
+
 protected:
    /**
     * It's a constructor for the Ship class
     * 
     * @param no The number of the ship.
-    * @param speed the speed of the ship in MGLT
+    * @param speed the MAX_SPEED of the ship in MGLT
     * @param nickname The name of the ship.
     */
    Ship(size_t no, double speed, std::string nickname);

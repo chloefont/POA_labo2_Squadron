@@ -14,7 +14,7 @@ class StarDreadnought : public Cargo {
 public:
 
    /**
-    * The StarDreadnought constructor initializes the Cargo base class with the speed, cargoWeight, and
+    * The StarDreadnought constructor initializes the Cargo base class with the MAX_SPEED, cargoWeight, and
     * nickname parameters, and the counter static variable.
     * 
     * @param cargoWeight The weight of the cargo in tons.
@@ -40,9 +40,10 @@ public:
 
 private:
    static size_t counter;
-   static double speed;
-   static const double WEIGHT;
+   static const double MAX_SPEED;
+   static const double SHIP_WEIGHT;
    static const std::string MODEL;
+   static const double MAX_CARGO_WEIGHT;
 };
 
 
