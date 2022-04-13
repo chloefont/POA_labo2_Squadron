@@ -1,4 +1,5 @@
 #include "TestsLinkedList.hpp"
+#include "TestsSquadron.h"
 
 using namespace std;
 
@@ -21,6 +22,28 @@ int main() {
    iteratorElementsNotEqualTest();
    findElementTest();
    findElementNotInListsTest();
+
+   cout << endl << "------ Squadron Tests" << endl;
+
+   copyConstructorTest();
+   addShipSelfTest();
+   addShipAlreadyInShipsTest();
+   addShipStaticTest();
+   removeShipSelfTest();
+   removeShipSelfWhenNotInShipsTest();
+   removeShipSelfWhenEmptyTest();
+   removeShipStaticTest();
+   getShipTest();
+   getShipOutBoundsTest();
+   getConsumptionTest();
+   setLeaderTest();
+   setNameTest();
+   removeLeaderTest();
+   addOperatorTest();
+   minusOperatorTest();
+   plusEqualOperatorTest();
+   minusEqualOperatorTest();
+   bracketsOperatorTest();
 
    return 0;
 }

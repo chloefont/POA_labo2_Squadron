@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Squadron::Squadron(string name) : name(name), ships() {}
+Squadron::Squadron(string name) : name(name), ships(), leader(nullptr) {}
 
 Squadron::Squadron(const Squadron &other) : name(other.name), leader(other.leader),
                                             ships(other.ships) {}
@@ -22,7 +22,7 @@ Squadron operator-(const Squadron &squad, const Ship &ship) {
 }
 
 std::ostream &operator<<(ostream &os, const Squadron &squad) {
-   os << "Squadron " << squad.name << endl
+   os << "Squadron : " << squad.name << endl
       << "\tmax speed : " << squad.getMaxSpeed() << " MGLT" << endl
       << "\ttotal weight : " << squad.getTotalWeight() << " tons" << endl;
 
@@ -84,6 +84,7 @@ void Squadron::setName(std::string name) {
 
 void Squadron::setLeader(const Ship &ship) {
    leader = (Ship *) &ship;
+   addShipSelf(ship);
 }
 
 void Squadron::removeLeader() {
@@ -135,6 +136,18 @@ double Squadron::getConsumption(double dist, double speed) const {
 // TODO faut pouvoir le modifier ?
 const Ship &Squadron::operator[](size_t index) const {
    return getShip(index);
+}
+
+size_t Squadron::getSize() const {
+   return ships.getSize();
+}
+
+std::string Squadron::getName() const {
+   return name;
+}
+
+Ship *Squadron::getLeader() const {
+   return leader;
 }
 
 

@@ -25,7 +25,7 @@ void CopyConstructorTest() {
 
    string expected = "3 2 1 ";
    string got = listToString(list2);
-   bool testOk = expected.compare(got) == 0;
+   bool testOk = expected == got;
 
    printResults("copy constructor", expected, got, testOk);
 }
@@ -38,7 +38,7 @@ void pushFrontTest() {
 
    string expected = "6 3 1 ";
    string got = listToString(list);
-   bool testPassed = expected.compare(got) == 0;
+   bool testPassed = expected == got;
 
    printResults("push front", expected, got, testPassed);
 }
@@ -51,7 +51,7 @@ void pushBackTest() {
 
    string expected = "6 3 1 ";
    string got = listToString(list);
-   bool testPassed = expected.compare(got) == 0;
+   bool testPassed = expected == got;
 
    printResults("push back", expected, got, testPassed);
 }
@@ -69,7 +69,7 @@ void removeIfExistsTest() {
 
     string expected = "6 3 6 3 ";
     string got = listToString(list);
-    bool testPassed = expected.compare(got) == 0;
+    bool testPassed = expected == got;
 
     printResults("remove if exists", expected, got, testPassed);
 }
@@ -87,7 +87,7 @@ void removeIfDoesNotExistTest() {
     string expected = "6 3 1 6 3 ";
     string got = listToString(list);
 
-    bool testPassed = expected.compare(got) == 0;
+    bool testPassed = expected == got;
 
     printResults("remove if does not exist", expected, got, testPassed);
 }
