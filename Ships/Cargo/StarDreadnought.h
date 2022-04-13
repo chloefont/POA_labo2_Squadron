@@ -10,9 +10,9 @@
 #include <string>
 #include "Cargo.h"
 
-class StarDreadnought:Cargo {
+class StarDreadnought : public Cargo {
 public:
-   StarDreadnought(std::string nickname = "", double cargoWeight = 0);
+   explicit StarDreadnought(double cargoWeight = 0, std::string nickname = "");
 
    std::string getModel() const override;
 

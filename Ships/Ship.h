@@ -18,7 +18,7 @@ public:
 
    std::string getId() const;
 
-   double getConsumption(double distance) const;
+   double getConsumption(double distance, double currentSpeed) const;
 
    double getSpeed() const;
 

@@ -13,12 +13,12 @@ int main() {
    HunterTIE blackLeader;
    blackLeader.setNickname("Black leader");
    HunterTIE blackTwo;
-   //Shuttle shuttle(23.4);
+   Shuttle shuttle(23.4);
 
    Squadron squad("Black Squadron");
    squad += blackLeader;
    squad += blackTwo;
-   //squad += shuttle;
+   squad += shuttle;
    squad.setLeader(blackLeader);
    cout << squad << endl;
    return 0;

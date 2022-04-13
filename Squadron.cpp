@@ -24,7 +24,7 @@ Squadron operator-(const Squadron &squad, const Ship &ship) {
 std::ostream &operator<<(ostream &os, const Squadron &squad) {
    os << "Squadron " << squad.name << endl
       << "\tmax speed : " << squad.getMaxSpeed() << " MGLT" << endl
-      << "\ttotal weight : " << squad.getTotalWeight() << "tons" << endl;
+      << "\ttotal weight : " << squad.getTotalWeight() << " tons" << endl;
 
    if (squad.leader != nullptr) {
       os << endl << "-- Leader:" << endl
@@ -123,7 +123,7 @@ double Squadron::getConsumption(double dist, double speed) const {
    double totalConsumption = 0;
 
    while (it != ships.end()) {
-      totalConsumption += (*it)->getConsumption(dist);
+      totalConsumption += (*it)->getConsumption(dist, speed);
       it++;
    }
    return totalConsumption;

@@ -12,8 +12,8 @@ const double Shuttle::WEIGHT = 360;
 const double Shuttle::MAX_WEIGHT = 80;
 const string Shuttle::MODEL = "Lambda-class shuttle";
 
-Shuttle::Shuttle(const string& nickname, double cargoWeight) :
-Cargo(counter++, speed, nickname, cargoWeight) {}
+Shuttle::Shuttle(double cargoWeight, const string& nickname) :
+Cargo(counter++, speed, cargoWeight, nickname) {}
 
 std::string Shuttle::getModel() const {
    return MODEL;

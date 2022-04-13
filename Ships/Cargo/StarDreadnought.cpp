@@ -11,8 +11,8 @@ double StarDreadnought::speed = 40;
 const double StarDreadnought::WEIGHT = 9e9;
 const std::string StarDreadnought::MODEL = "Super-class Star Destroyer";
 
-StarDreadnought::StarDreadnought(string nickname, double cargoWeight) :
-Cargo(counter++, speed, nickname, cargoWeight) {}
+StarDreadnought::StarDreadnought(double cargoWeight, string nickname) :
+Cargo(counter++, speed, cargoWeight, nickname) {}
 
 std::string StarDreadnought::getModel() const {
    return MODEL;

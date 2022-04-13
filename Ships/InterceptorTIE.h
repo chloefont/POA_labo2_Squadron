@@ -7,7 +7,7 @@
 
 #include "./Ship.h"
 
-class InterceptorTIE : Ship {
+class InterceptorTIE : public Ship {
 public:
    explicit InterceptorTIE(const std::string& nickname = "");
    std::string getModel() const override;
