@@ -130,3 +130,87 @@ void emptyTest() {
 
     printResults("empty", to_string(expected), to_string(got), testPassed);
 }
+
+void emptyWithFilledListTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    bool expected = false;
+    bool got = list.empty();
+    bool testPassed = expected == got;
+
+    printResults("empty with filled list", to_string(expected), to_string(got),
+    testPassed);
+}
+
+void iteratorBeforeIncrementTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    Iterator<int> it = list.begin();
+    ++it;
+
+    int expected = 3;
+    int got = *it;
+    bool testPassed = expected == got;
+
+    printResults("iterator before increment", to_string(expected), to_string(got),
+    testPassed);
+}
+
+void iteratorAfterIncrementTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    Iterator<int> it = list.begin();
+    it++;
+
+    int expected = 3;
+    int got = *it;
+    bool testPassed = expected == got;
+
+    printResults("iterator after increment", to_string(expected), to_string(got),
+    testPassed);
+}
+
+void iteratorElementsEqualTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    Iterator<int> it = list.begin();
+    Iterator<int> it2 = list.begin();
+
+    bool expected = true;
+    bool got = it == it2;
+    bool testPassed = expected == got;
+
+    printResults("iterator elements equal", to_string(expected), to_string(got),
+    testPassed);
+}
+
+void iteratorElementsNotEqualTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    Iterator<int> it = list.begin();
+    Iterator<int> it2 = list.begin();
+
+   ++it2;
+
+    bool expected = false;
+    bool got = it == it2;
+    bool testPassed = expected == got;
+
+    printResults("iterator elements not equal", to_string(expected), to_string(got),
+    testPassed);
+}

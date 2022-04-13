@@ -12,6 +12,11 @@ int main() {
    getElementWithInvalidIndexTest();
    getSizeTest();
    emptyTest();
+   emptyWithFilledListTest();
+   iteratorBeforeIncrementTest();
+   iteratorAfterIncrementTest();
+   iteratorElementsEqualTest();
+   iteratorElementsNotEqualTest();
 
    return 0;
 }
