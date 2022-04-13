@@ -22,6 +22,8 @@ void getSizeTest();
 
 void emptyTest();
 
+void emptyWithFilledListTest();
+
 void iteratorBeforeIncrementTest();
 
 void iteratorAfterIncrementTest();

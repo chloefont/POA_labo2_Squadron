@@ -89,7 +89,7 @@ LinkedList<T>::LinkedList(const LinkedList &other) {
 template<typename T>
 T LinkedList<T>::get(size_t index) const {
    if (index >= size) {
-      throw std::out_of_range("Index out of range");
+      throw std::out_of_range("Index out of bounds");
    }
 
    Node *current = beforeFirst.next;
@@ -124,6 +124,10 @@ std::ostream &operator<<(std::ostream &os, const LinkedList<T> &list) {
 template<typename T>
 Iterator<T> LinkedList<T>::end() const noexcept {
    Node *current = beforeFirst.next;
+   if (current == nullptr) {
+      return Iterator<T>(nullptr);
+   }
+
    while (current->next != nullptr) {
       current = current->next;
    }
