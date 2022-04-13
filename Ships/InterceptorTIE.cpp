@@ -6,10 +6,12 @@
 using namespace std;
 
 size_t InterceptorTIE::counter = 1;
+double InterceptorTIE::speed = 110;
 const char* InterceptorTIE::MODEL = "TIE/IN";
 const double InterceptorTIE::WEIGHT = 5;
 
-InterceptorTIE::InterceptorTIE(const string& nickname) : Ship(counter++, nickname) {}
+InterceptorTIE::InterceptorTIE(const string& nickname) : Ship(counter++, speed,
+                                                              nickname) {}
 
 string InterceptorTIE::getModel() const {
    return MODEL;

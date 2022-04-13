@@ -28,9 +28,7 @@ std::ostream &operator<<(ostream &os, const Squadron &squad) {
 
    if (squad.leader != nullptr) {
       os << endl << "-- Leader:" << endl
-         << squad.leader->getId() << endl
-         << "\tweight : " << squad.leader->getWeight() << endl
-         << "\tmax speed : " << squad.leader->getSpeed() << " MGLT" << endl;
+         << squad.leader->toString();
    }
 
    os << endl << "-- Members:" << endl;
@@ -118,6 +116,22 @@ double Squadron::getTotalWeight() const {
       it++;
    }
    return totalWeight;
+}
+
+double Squadron::getConsumption(double dist, double speed) const {
+   Iterator<Ship*> it = ships.begin();
+   double totalConsumption = 0;
+
+   while (it != ships.end()) {
+      totalConsumption += (*it)->getConsumption(dist);
+      it++;
+   }
+   return totalConsumption;
+}
+
+// TODO faut pouvoir le modifier ?
+const Ship &Squadron::operator[](size_t index) const {
+   return getShip(index);
 }
 
 

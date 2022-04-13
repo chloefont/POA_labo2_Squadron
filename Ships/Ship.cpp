@@ -18,8 +18,8 @@ double Ship::getConsumption(double distance) const {
    (distance + 1) ;
 }
 
-Ship::Ship(size_t no, const std::string& nickname = "") :
-nickname(nickname), no(no), speed(0) {}
+Ship::Ship(size_t no, double speed, const std::string& nickname = "") :
+nickname(nickname), no(no), speed(speed) {}
 
 double Ship::getSpeed() const {
    return speed;

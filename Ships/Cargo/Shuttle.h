@@ -21,7 +21,7 @@ public:
    double getCargoMaxWeight() const override;
 private:
    static size_t counter;
-   static double maxSpeed;
+   static double speed;
    static const double WEIGHT;
    static const double MAX_WEIGHT;
    static const std::string MODEL;

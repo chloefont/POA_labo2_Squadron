@@ -7,11 +7,12 @@
 using namespace std;
 
 size_t StarDreadnought::counter = 1;
+double StarDreadnought::speed = 40;
 const double StarDreadnought::WEIGHT = 9e9;
 const std::string StarDreadnought::MODEL = "Super-class Star Destroyer";
 
 StarDreadnought::StarDreadnought(string nickname, double cargoWeight) :
-Cargo(counter++, nickname, cargoWeight) {}
+Cargo(counter++, speed, nickname, cargoWeight) {}
 
 std::string StarDreadnought::getModel() const {
    return MODEL;

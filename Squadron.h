@@ -25,8 +25,7 @@ public:
 
    Squadron& operator-=(const Ship& ship);
 
-   // TODO: implement
-   Ship& operator[](size_t index);
+   const Ship& operator[](size_t index) const;
 
    explicit Squadron(std::string name);
 
@@ -42,8 +41,7 @@ public:
 
    Ship& getShip(size_t index) const;
 
-   // TODO
-   double getConsommation(double dist, double speed) const;
+   double getConsumption(double dist, double speed) const;
 
    void setLeader(const Ship& ship);
 

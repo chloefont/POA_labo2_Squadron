@@ -13,7 +13,8 @@ public:
    double getCargoCurrentWeight() const;
 
 protected:
-   Cargo(size_t number, const std::string& nickname = "", double cargoWeight = 0);
+   Cargo(size_t number, double speed, const std::string& nickname = "", double
+   cargoWeight = 0);
 
 private:
     virtual double getCargoMaxWeight() const = 0;

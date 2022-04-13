@@ -32,7 +32,7 @@ public:
 
 protected:
    // TODO const string& ?
-   Ship(size_t no, const std::string& nickname);
+   Ship(size_t no, double speed, const std::string& nickname);
 
 private:
    std::string nickname;
