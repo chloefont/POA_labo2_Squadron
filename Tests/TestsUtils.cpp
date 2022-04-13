@@ -16,4 +16,8 @@ void printResults(const std::string& testName, const std::string& expected,
    << "\texpected : " << expected << endl
    << "\tgot : " << got << endl
    << "\ttest passed : " << testPassed << endl;
+
+   if(!testOk) {
+      throw runtime_error("Test failed");
+   }
 }

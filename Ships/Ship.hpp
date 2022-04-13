@@ -51,6 +51,8 @@ public:
     */
    void setNickname(std::string nickname);
 
+   std::string getNickname() const;
+
    /**
     * It returns a string representation of the ship
     * 

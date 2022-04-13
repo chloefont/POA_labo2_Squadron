@@ -1,5 +1,6 @@
 #include "TestsLinkedList.hpp"
 #include "TestsSquadron.h"
+#include "TestsShips.hpp"
 
 using namespace std;
 
@@ -23,6 +24,46 @@ int main() {
    findElementTest();
    findElementNotInListsTest();
 
+   getModelInterceptorTIETest();
+   getWeightInterceptorTIETest();
+   operatorOStreamInterceptorTIETest();
+   getIdInterceptorTIETest();
+   getConsumptionInterceptorTIETest();
+   getSpeedInterceptorTIETest();
+   setNicknameInterceptorTIETest();
+   toStringInterceptorTIETest();
+
+   getModelHunterTIETest();
+   getWeightHunterTIETest();
+   operatorOStreamHunterTIETest();
+   getIdHunterTIETest();
+   getConsumptionHunterTIETest();
+   getSpeedHunterTIETest();
+   setNicknameHunterTIETest();
+   toStringHunterTIETest();
+
+   getModelStarDreadnoughtTest();
+   getWeightStarDreadnoughtTest();
+   getCargoCurrentWeightStarDreadnoughtTest();
+   getCargoMaxWeightStarDreadnoughtTest();
+   operatorOStreamStarDreadnoughtTest();
+   getIdStarDreadnoughtTest();
+   getConsumptionStarDreadnoughtTest();
+   getSpeedStarDreadnoughtTest();
+   setNicknameStarDreadnoughtTest();
+   toStringStarDreadnoughtTest();
+
+   getModelShuttleTest();
+   getWeightShuttleTest();
+   getCargoCurrentWeightTest();
+   getCargoMaxWeightShuttleTest();
+   operatorOStreamShuttleTest();
+   getIdShuttleTest();
+   getConsumptionShuttleTest();
+   getSpeedShuttleTest();
+   setNicknameShuttleTest();
+   toStringShuttleTest();
+
    cout << endl << "------ Squadron Tests" << endl;
 
    copyConstructorTest();
@@ -44,6 +85,8 @@ int main() {
    plusEqualOperatorTest();
    minusEqualOperatorTest();
    bracketsOperatorTest();
+
+
 
    return 0;
 }

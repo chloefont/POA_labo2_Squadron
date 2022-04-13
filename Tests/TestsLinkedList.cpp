@@ -9,7 +9,7 @@
 using namespace std;
 
 string listToString(const LinkedList<int> &list) {
-    string result = "";
+    string result;
     for (size_t i = 0; i < list.getSize(); i++) {
         result += to_string(list.get(i)) + " ";
     }

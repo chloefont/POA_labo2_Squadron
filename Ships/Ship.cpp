@@ -43,4 +43,8 @@ std::string Ship::toString() const {
    return oss.str();
 }
 
+std::string Ship::getNickname() const {
+   return nickname;
+}
+
 

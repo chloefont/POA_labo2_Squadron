@@ -18,6 +18,8 @@ public:
     */
    double getCargoCurrentWeight() const;
 
+   std::string toString() const override;
+
 protected:
    /**
     * It's a constructor for the Cargo class
@@ -30,7 +32,7 @@ protected:
    Cargo(size_t number, double speed, double
    cargoWeight = 0, std::string nickname = "");
 
-   std::string toString() const override;
+
 
 private:
    virtual double getCargoMaxWeight() const = 0;
