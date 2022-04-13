@@ -1,7 +1,14 @@
-//
-// Created by cfont on 13.04.2022.
-//
+#include "TestsLinkedList.h"
+
+using namespace std;
 
 int main() {
+   cout << "Linked List Tests" << endl;
+
+   pushFrontTest();
+   removeIfExistsTest();
+   removeIfDoesNotExistTest();
+   getElementWithValidIndexTest();
+
    return 0;
 }

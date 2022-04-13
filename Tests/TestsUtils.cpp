@@ -9,8 +9,11 @@
 using namespace std;
 
 void printResults(const std::string& testName, const std::string& expected,
-                  std::string got) {
+                  const std::string& got, bool testOk) {
+   string testPassed = testOk ? "PASSED" : "FAILED";
+
    cout << "Test " << testName << endl
    << "\texpected : " << expected << endl
-   << "\tgot : " << got << endl;
+   << "\tgot : " << got << endl
+   << "\ttest passed : " << testPassed << endl;
 }
