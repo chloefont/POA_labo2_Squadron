@@ -2,13 +2,13 @@
 // Created by cfont on 24.03.2022.
 //
 
-#ifndef POA_LABO2_SQUADRONS_STARDREADNOUGHT_H
-#define POA_LABO2_SQUADRONS_STARDREADNOUGHT_H
+#ifndef POA_LABO2_SQUADRONS_STARDREADNOUGHT_HPP
+#define POA_LABO2_SQUADRONS_STARDREADNOUGHT_HPP
 
 
 #include <cstdlib>
 #include <string>
-#include "Cargo.h"
+#include "Cargo.hpp"
 
 class StarDreadnought : public Cargo {
 public:
@@ -17,6 +17,7 @@ public:
    std::string getModel() const override;
 
    double getWeight() const override;
+
 private:
    static size_t counter;
    static double speed;
@@ -25,4 +26,4 @@ private:
 };
 
 
-#endif //POA_LABO2_SQUADRONS_STARDREADNOUGHT_H
+#endif //POA_LABO2_SQUADRONS_STARDREADNOUGHT_HPP

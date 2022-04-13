@@ -4,16 +4,16 @@
 
 #include "cstdlib"
 #include "iostream"
-#include "Squadron.h"
+#include "Squadron.hpp"
 
 using namespace std;
 
 Squadron::Squadron(string name) : name(name), ships() {}
 
 Squadron::Squadron(const Squadron &other) : name(other.name), leader(other.leader),
-ships(other.ships) {}
+                                            ships(other.ships) {}
 
-Squadron operator+(const Squadron &squad, const Ship& ship) {
+Squadron operator+(const Squadron &squad, const Ship &ship) {
    return Squadron(squad) += ship;
 }
 
@@ -32,10 +32,10 @@ std::ostream &operator<<(ostream &os, const Squadron &squad) {
    }
 
    os << endl << "-- Members:" << endl;
-   Iterator<Ship*> it = squad.ships.begin();
+   Iterator<Ship *> it = squad.ships.begin();
    while (it != squad.ships.end()) {
       if (*it != squad.leader) {
-         os <<(*it)->toString() << endl;
+         os << (*it)->toString() << endl;
       }
       it++;
    }
@@ -49,7 +49,7 @@ Squadron Squadron::addShipStatic(const Ship &ship) {
    return newSquadron;
 }
 
-Squadron& Squadron::addShipSelf(const Ship& ship) {
+Squadron &Squadron::addShipSelf(const Ship &ship) {
    ships.pushFront((Ship *) &ship);
    return *this;
 }
@@ -81,8 +81,8 @@ void Squadron::setName(std::string name) {
    this->name = name;
 }
 
-void Squadron::setLeader(const Ship& ship) {
-   leader = (Ship*) &ship;
+void Squadron::setLeader(const Ship &ship) {
+   leader = (Ship *) &ship;
 }
 
 void Squadron::removeLeader() {
@@ -94,7 +94,7 @@ double Squadron::getMaxSpeed() const {
       return 0;
    }
 
-   Iterator<Ship*> it = ships.begin();
+   Iterator<Ship *> it = ships.begin();
    double maxSpeed = (*it)->getSpeed();
    it++;
 
@@ -108,7 +108,7 @@ double Squadron::getMaxSpeed() const {
 }
 
 double Squadron::getTotalWeight() const {
-   Iterator<Ship*> it = ships.begin();
+   Iterator<Ship *> it = ships.begin();
    double totalWeight = 0;
 
    while (it != ships.end()) {
@@ -119,7 +119,7 @@ double Squadron::getTotalWeight() const {
 }
 
 double Squadron::getConsumption(double dist, double speed) const {
-   Iterator<Ship*> it = ships.begin();
+   Iterator<Ship *> it = ships.begin();
    double totalConsumption = 0;
 
    while (it != ships.end()) {

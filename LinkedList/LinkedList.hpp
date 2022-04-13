@@ -2,27 +2,27 @@
 // Created by cfont on 31.03.2022.
 //
 
-#ifndef POA_LABO2_SQUADRONS_LINKEDLIST_H
-#define POA_LABO2_SQUADRONS_LINKEDLIST_H
+#ifndef POA_LABO2_SQUADRONS_LINKEDLIST_HPP
+#define POA_LABO2_SQUADRONS_LINKEDLIST_HPP
 
 #include <cstddef>
 #include <stdexcept>
 #include "iostream"
-#include "Iterator.h"
+#include "Iterator.hpp"
 
 template<typename T>
-std::ostream& operator<<(std::ostream& os, const LinkedList<T>& list);
+std::ostream &operator<<(std::ostream &os, const LinkedList<T> &list);
 
 template<typename T>
 class LinkedList {
 public:
    friend class Iterator<T>;
 
-   friend std::ostream& operator<< <T>(std::ostream& os, const LinkedList<T>& list);
+   friend std::ostream &operator<<<T>(std::ostream &os, const LinkedList<T> &list);
 
    LinkedList();
 
-   LinkedList(const LinkedList& other);
+   LinkedList(const LinkedList &other);
 
    void pushFront(T value);
 
@@ -53,15 +53,15 @@ LinkedList<T>::LinkedList() : beforeFirst{T(), nullptr}, size(0) {}
 
 template<typename T>
 void LinkedList<T>::pushFront(T value) {
-   Node* newNode = new Node{value, beforeFirst.next};
+   Node *newNode = new Node{value, beforeFirst.next};
    beforeFirst.next = newNode;
    size++;
 }
 
 template<typename T>
 void LinkedList<T>::remove(T value) {
-   Node* current = beforeFirst.next;
-   Node* previous = &beforeFirst;
+   Node *current = beforeFirst.next;
+   Node *previous = &beforeFirst;
 
    while (current != nullptr) {
       if (current->value == value) {
@@ -77,7 +77,7 @@ void LinkedList<T>::remove(T value) {
 
 template<typename T>
 LinkedList<T>::LinkedList(const LinkedList &other) {
-   Node* current = other.beforeFirst.next;
+   Node *current = other.beforeFirst.next;
    while (current != nullptr) {
       pushFront(current->value);
       current = current->next;
@@ -90,7 +90,7 @@ T LinkedList<T>::get(size_t index) const {
       throw std::out_of_range("Index out of range");
    }
 
-   Node* current = beforeFirst.next;
+   Node *current = beforeFirst.next;
    size_t i = 0;
    while (i < index) {
       current = current->next;
@@ -110,7 +110,7 @@ Iterator<T> LinkedList<T>::begin() const noexcept {
 }
 
 template<typename T>
-std::ostream& operator<<(std::ostream& os, const LinkedList<T>& list) {
+std::ostream &operator<<(std::ostream &os, const LinkedList<T> &list) {
    auto current = list.beforeFirst.next;
    while (current != nullptr) {
       os << current->value << std::endl;
@@ -134,4 +134,4 @@ bool LinkedList<T>::empty() const noexcept {
    return begin() == end();
 }
 
-#endif //POA_LABO2_SQUADRONS_LINKEDLIST_H
+#endif //POA_LABO2_SQUADRONS_LINKEDLIST_HPP

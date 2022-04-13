@@ -2,47 +2,49 @@
 // Created by cfont on 12.04.2022.
 //
 
-#ifndef POA_LABO2_SQUADRONS_ITERATOR_H
-#define POA_LABO2_SQUADRONS_ITERATOR_H
+#ifndef POA_LABO2_SQUADRONS_ITERATOR_HPP
+#define POA_LABO2_SQUADRONS_ITERATOR_HPP
 
-template <typename T> class LinkedList;
+template<typename T>
+class LinkedList;
 
 template<typename T>
 class Iterator {
 private:
    friend class LinkedList<T>;
+
    using Node = typename LinkedList<T>::Node;
 
    Node *current;
 
-   Iterator(Node* node) : current(node) {}
+   Iterator(Node *node) : current(node) {}
 
 public:
    Iterator() : current(nullptr) {}
 
-   Iterator& operator++ () {
+   Iterator &operator++() {
       current = current->next;
       return *this;
    }
 
-   Iterator operator++ (int) {
+   Iterator operator++(int) {
       auto tmp(*this);
       operator++();
       return tmp;
    }
 
-   bool operator==(const Iterator& i) {
+   bool operator==(const Iterator &i) {
       return current == i.current;
    }
 
-   bool operator!=(const Iterator& i) {
+   bool operator!=(const Iterator &i) {
       return current != i.current;
    }
 
-   T & operator*() {
+   T &operator*() {
       return current->value;
    }
 };
 
-#endif //POA_LABO2_SQUADRONS_ITERATOR_H
+#endif //POA_LABO2_SQUADRONS_ITERATOR_HPP
 

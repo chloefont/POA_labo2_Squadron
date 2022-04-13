@@ -2,7 +2,7 @@
 // Created by cfont on 24.03.2022.
 //
 
-#include "Ship.h"
+#include "Ship.hpp"
 #include <cmath>
 #include <iostream>
 #include <sstream>
@@ -14,18 +14,18 @@ string Ship::getId() const {
 }
 
 double Ship::getConsumption(double distance, double currentSpeed) const {
-   return pow(getWeight(), 1.0/3.0) / 2 * log10 (getWeight() * currentSpeed) * log10
-   (distance + 1) ;
+   return pow(getWeight(), 1.0 / 3.0) / 2 * log10(getWeight() * currentSpeed) * log10
+      (distance + 1);
 }
 
-Ship::Ship(size_t no, double speed, const std::string& nickname = "") :
-nickname(nickname), speed(speed), no(no) {}
+Ship::Ship(size_t no, double speed, const std::string &nickname = "") :
+   nickname(nickname), speed(speed), no(no) {}
 
 double Ship::getSpeed() const {
    return speed;
 }
 
-void Ship::setNickname(const std::string& nickname) {
+void Ship::setNickname(const std::string &nickname) {
    this->nickname = nickname;
 }
 

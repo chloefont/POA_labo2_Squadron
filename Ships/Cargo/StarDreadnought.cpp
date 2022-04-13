@@ -2,7 +2,7 @@
 // Created by cfont on 24.03.2022.
 //
 
-#include "StarDreadnought.h"
+#include "StarDreadnought.hpp"
 
 using namespace std;
 
@@ -12,7 +12,7 @@ const double StarDreadnought::WEIGHT = 9e9;
 const std::string StarDreadnought::MODEL = "Super-class Star Destroyer";
 
 StarDreadnought::StarDreadnought(double cargoWeight, string nickname) :
-Cargo(counter++, speed, cargoWeight, nickname) {}
+   Cargo(counter++, speed, cargoWeight, nickname) {}
 
 std::string StarDreadnought::getModel() const {
    return MODEL;

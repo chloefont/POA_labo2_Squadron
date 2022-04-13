@@ -2,15 +2,16 @@
 // Created by cfont on 24.03.2022.
 //
 
-#include "InterceptorTIE.h"
+#include "InterceptorTIE.hpp"
+
 using namespace std;
 
 size_t InterceptorTIE::counter = 1;
 double InterceptorTIE::speed = 110;
-const char* InterceptorTIE::MODEL = "TIE/IN";
+const char *InterceptorTIE::MODEL = "TIE/IN";
 const double InterceptorTIE::WEIGHT = 5;
 
-InterceptorTIE::InterceptorTIE(const string& nickname) : Ship(counter++, speed,
+InterceptorTIE::InterceptorTIE(const string &nickname) : Ship(counter++, speed,
                                                               nickname) {}
 
 string InterceptorTIE::getModel() const {

@@ -1,11 +1,11 @@
 #include <iostream>
-#include "Squadron.h"
-#include "Ships/Cargo/Cargo.h"
-#include "Ships/Cargo/Shuttle.h"
-#include "Ships/Cargo/StarDreadnought.h"
-#include "Ships/HunterTIE.h"
-#include "Ships/InterceptorTIE.h"
-#include "Ships/Ship.h"
+#include "Squadron.hpp"
+#include "Ships/Cargo/Cargo.hpp"
+#include "Ships/Cargo/Shuttle.hpp"
+#include "Ships/Cargo/StarDreadnought.hpp"
+#include "Ships/HunterTIE.hpp"
+#include "Ships/InterceptorTIE.hpp"
+#include "Ships/Ship.hpp"
 
 using namespace std;
 
