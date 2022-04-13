@@ -25,8 +25,7 @@ public:
    std::string getId() const;
 
    /**
-    * The consumption of a ship is the cube root of its weight divided by two, multiplied by the logarithm
-    * of its weight times its current speed, multiplied by the logarithm of its distance plus one.
+    * The consumption of a ship.
     * 
     * @param distance the distance the ship has traveled in mio. km.
     * @param currentSpeed The current speed of the ship.
@@ -45,7 +44,6 @@ public:
 
    virtual double getWeight() const = 0;
 
-   // TODO const string& ?
    /**
     * It sets the nickname of the ship
     * 
@@ -61,7 +59,6 @@ public:
    std::string toString() const;
 
 protected:
-   // TODO const string& ?
    /**
     * It's a constructor for the Ship class
     * 

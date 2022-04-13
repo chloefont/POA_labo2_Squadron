@@ -23,7 +23,7 @@ public:
    explicit StarDreadnought(double cargoWeight = 0, std::string nickname = "");
 
    /**
-    * It returns the value of the constant MODEL
+    * It returns StarDreadnought model.
     * 
     * @return The model of the ship.
     */
