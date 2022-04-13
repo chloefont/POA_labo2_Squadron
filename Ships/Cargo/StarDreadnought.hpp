@@ -36,6 +36,8 @@ public:
     */
    double getWeight() const override;
 
+   double getCargoMaxWeight() const override;
+
 private:
    static size_t counter;
    static double speed;

@@ -3,6 +3,7 @@
 //
 
 #include "StarDreadnought.hpp"
+#include "limits"
 
 using namespace std;
 
@@ -20,4 +21,8 @@ std::string StarDreadnought::getModel() const {
 
 double StarDreadnought::getWeight() const {
    return WEIGHT + getCargoCurrentWeight();
+}
+
+double StarDreadnought::getCargoMaxWeight() const {
+   return numeric_limits<double>::infinity();
 }
