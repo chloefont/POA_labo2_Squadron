@@ -6,7 +6,7 @@
 #define POA_LABO2_SQUADRONS_TESTSLINKEDLIST_HPP
 
 #include "../LinkedList/LinkedList.hpp"
-#include "TestsUtils.h"
+#include "TestsUtils.hpp"
 
 void CopyConstructorTest();
 

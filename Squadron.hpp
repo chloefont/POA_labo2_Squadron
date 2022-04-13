@@ -110,6 +110,12 @@ public:
     */
    void removeLeader();
 
+   size_t getSize() const;
+
+   std::string getName() const;
+
+   Ship* getLeader() const;
+
 private:
    /**
     * If the squadron is empty it returns 0 otherwise else it returns the MAX_SPEED of the slowest ship in the

@@ -15,10 +15,11 @@ add_executable(POA_labo2_Squadrons
         LinkedList/LinkedList.hpp LinkedList/Iterator.hpp)
 add_executable(POA_labo2_Tests
         Tests/mainTests.cpp
+        Squadron.cpp Squadron.hpp
         Tests/TestsLinkedList.cpp Tests/TestsLinkedList.hpp
         Tests/TestsShips.cpp Tests/TestsShips.hpp
-        Tests/TestsSquadron.cpp Tests/TestsSquadron.h
-        Tests/TestsUtils.cpp Tests/TestsUtils.h
+        Tests/TestsSquadron.cpp Tests/TestsSquadron.hpp
+        Tests/TestsUtils.cpp Tests/TestsUtils.hpp
         Ships/Ship.cpp Ships/Ship.hpp
         Ships/Cargo/Cargo.cpp Ships/Cargo/Cargo.hpp
         Ships/HunterTIE.cpp Ships/HunterTIE.hpp
