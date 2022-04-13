@@ -24,6 +24,8 @@ int main() {
    findElementTest();
    findElementNotInListsTest();
 
+   cout << endl << "------ Ships Tests" << endl;
+
    getModelInterceptorTIETest();
    getWeightInterceptorTIETest();
    operatorOStreamInterceptorTIETest();
@@ -85,8 +87,6 @@ int main() {
    plusEqualOperatorTest();
    minusEqualOperatorTest();
    bracketsOperatorTest();
-
-
 
    return 0;
 }
