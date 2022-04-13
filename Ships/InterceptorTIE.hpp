@@ -9,10 +9,25 @@
 
 class InterceptorTIE : public Ship {
 public:
+   /**
+    * It's a constructor for the InterceptorTIE class
+    * 
+    * @param nickname The nickname of the ship.
+    */
    explicit InterceptorTIE(std::string nickname = "");
 
+   /** 
+    * It's a getter for the model of the ship.
+    * 
+    * @return The model of the ship.
+    */
    std::string getModel() const override;
 
+   /**
+    * It's a getter for the weight of the ship.
+    * 
+    * @return The weight of the ship.
+    */
    double getWeight() const override;
 
 private:

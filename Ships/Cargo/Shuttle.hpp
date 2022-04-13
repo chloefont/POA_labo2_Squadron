@@ -12,12 +12,34 @@
 
 class Shuttle : public Cargo {
 public:
-   Shuttle(double cargoWeight = 0, std::string nickname = "");
+   /**
+    * The Shuttle constructor initializes the Shuttle's cargoWeight and nickname, and sets the Shuttle's
+    * speed to the value of the speed constant
+    * 
+    * @param cargoWeight The weight of the cargo in the shuttle.
+    * @param nickname The name of the shuttle.
+    */
+   Shuttle(double cargoWeight = 0, const std::string &nickname = "");
 
+   /**
+    * Return the model of the shuttle.
+    * 
+    * @return The model of the shuttle.
+    */
    std::string getModel() const override;
 
+   /**
+    * The function returns the shuttle's weight plus the weight of the cargo
+    * 
+    * @return The weight of the shuttle plus the weight of the cargo.
+    */
    double getWeight() const override;
 
+   /**
+    * It returns the maximum weight of the cargo.
+    * 
+    * @return The maximum weight of the cargo.
+    */
    double getCargoMaxWeight() const override;
 
 private:

@@ -12,10 +12,28 @@
 
 class StarDreadnought : public Cargo {
 public:
+
+   /**
+    * The StarDreadnought constructor initializes the Cargo base class with the speed, cargoWeight, and
+    * nickname parameters, and the counter static variable.
+    * 
+    * @param cargoWeight The weight of the cargo in tons.
+    * @param nickname The name of the ship.
+    */
    explicit StarDreadnought(double cargoWeight = 0, std::string nickname = "");
 
+   /**
+    * It returns the value of the constant MODEL
+    * 
+    * @return The model of the ship.
+    */
    std::string getModel() const override;
 
+   /**
+    * It returns the weight of the ship plus the weight of the cargo
+    * 
+    * @return The weight of the ship plus the weight of the cargo.
+    */
    double getWeight() const override;
 
 private:

@@ -13,7 +13,6 @@ const double InterceptorTIE::WEIGHT = 5;
 
 InterceptorTIE::InterceptorTIE(string nickname) : Ship(counter++, speed,
                                                               nickname) {}
-
 string InterceptorTIE::getModel() const {
    return MODEL;
 }
