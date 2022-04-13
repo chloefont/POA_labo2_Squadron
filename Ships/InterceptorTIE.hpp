@@ -9,7 +9,7 @@
 
 class InterceptorTIE : public Ship {
 public:
-   explicit InterceptorTIE(const std::string &nickname = "");
+   explicit InterceptorTIE(std::string nickname = "");
 
    std::string getModel() const override;
 

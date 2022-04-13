@@ -7,7 +7,7 @@
 using namespace std;
 
 Cargo::Cargo(size_t number, double speed, double
-cargoWeight, const string &nickname) :
+cargoWeight, string nickname) :
    Ship(number, speed, nickname), cargoCurrentWeight(cargoWeight) {}
 
 double Cargo::getCargoCurrentWeight() const {

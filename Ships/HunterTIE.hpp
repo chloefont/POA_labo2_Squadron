@@ -12,7 +12,7 @@
 
 class HunterTIE : public Ship {
 public:
-   explicit HunterTIE(const std::string &nickname = "");
+   explicit HunterTIE(std::string nickname = "");
 
    std::string getModel() const override;
 

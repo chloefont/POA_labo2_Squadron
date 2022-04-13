@@ -12,7 +12,7 @@
 
 class Shuttle : public Cargo {
 public:
-   Shuttle(double cargoWeight = 0, const std::string &nickname = "");
+   Shuttle(double cargoWeight = 0, std::string nickname = "");
 
    std::string getModel() const override;
 

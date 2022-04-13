@@ -11,7 +11,7 @@ double InterceptorTIE::speed = 110;
 const char *InterceptorTIE::MODEL = "TIE/IN";
 const double InterceptorTIE::WEIGHT = 5;
 
-InterceptorTIE::InterceptorTIE(const string &nickname) : Ship(counter++, speed,
+InterceptorTIE::InterceptorTIE(string nickname) : Ship(counter++, speed,
                                                               nickname) {}
 
 string InterceptorTIE::getModel() const {

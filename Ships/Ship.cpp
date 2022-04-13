@@ -18,14 +18,14 @@ double Ship::getConsumption(double distance, double currentSpeed) const {
       (distance + 1);
 }
 
-Ship::Ship(size_t no, double speed, const std::string &nickname = "") :
+Ship::Ship(size_t no, double speed, string nickname = "") :
    nickname(nickname), speed(speed), no(no) {}
 
 double Ship::getSpeed() const {
    return speed;
 }
 
-void Ship::setNickname(const std::string &nickname) {
+void Ship::setNickname(string nickname) {
    this->nickname = nickname;
 }
 

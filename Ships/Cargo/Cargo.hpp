@@ -14,7 +14,7 @@ public:
 
 protected:
    Cargo(size_t number, double speed, double
-   cargoWeight = 0, const std::string &nickname = "");
+   cargoWeight = 0, std::string nickname = "");
 
 private:
    virtual double getCargoMaxWeight() const = 0;

@@ -26,13 +26,13 @@ public:
 
    virtual double getWeight() const = 0;
 
-   void setNickname(const std::string &nickname);
+   void setNickname(std::string nickname);
 
    std::string toString() const;
 
 protected:
-   // TODO const string& ?
-   Ship(size_t no, double speed, const std::string &nickname);
+   // TODO pas en const string& psk veut créer une copie
+   Ship(size_t no, double speed, std::string nickname);
 
 private:
    std::string nickname;

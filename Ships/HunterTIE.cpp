@@ -11,7 +11,7 @@ double HunterTIE::speed = 100;
 const char *HunterTIE::MODEL = "TIE/LN";
 const double HunterTIE::WEIGHT = 6;
 
-HunterTIE::HunterTIE(const string &nickname) : Ship(counter++, speed, nickname) {}
+HunterTIE::HunterTIE(string nickname) : Ship(counter++, speed, nickname) {}
 
 std::string HunterTIE::getModel() const {
    return MODEL;
