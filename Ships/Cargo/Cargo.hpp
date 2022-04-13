@@ -7,9 +7,10 @@
 
 #include "../Ship.hpp"
 
-// TODO abstraite ?
+
 class Cargo : public Ship {
 public:
+
    /**
     * 
     * 
@@ -28,6 +29,8 @@ protected:
     */
    Cargo(size_t number, double speed, double
    cargoWeight = 0, std::string nickname = "");
+
+   std::string toString() const override;
 
 private:
    virtual double getCargoMaxWeight() const = 0;

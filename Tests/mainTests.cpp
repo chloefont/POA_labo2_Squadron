@@ -1,4 +1,4 @@
-#include "TestsLinkedList.h"
+#include "TestsLinkedList.hpp"
 
 using namespace std;
 
@@ -20,6 +20,7 @@ int main() {
    iteratorElementsEqualTest();
    iteratorElementsNotEqualTest();
    findElementTest();
+   findElementNotInListsTest();
 
    return 0;
 }

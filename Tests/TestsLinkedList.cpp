@@ -4,7 +4,7 @@
 
 #include <string>
 #include <cstring>
-#include "TestsLinkedList.h"
+#include "TestsLinkedList.hpp"
 
 using namespace std;
 
@@ -253,4 +253,17 @@ void findElementTest() {
     bool testPassed = expected == got;
 
     printResults("isIn element", to_string(expected), to_string(got), testPassed);
+}
+
+void findElementNotInListsTest() {
+   LinkedList<int> list;
+   list.pushFront(1);
+   list.pushFront(3);
+   list.pushFront(6);
+
+   bool expected = false;
+   bool got = list.isIn(5);
+   bool testPassed = expected == got;
+
+   printResults("isIn element", to_string(expected), to_string(got), testPassed);
 }

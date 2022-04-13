@@ -56,7 +56,7 @@ public:
     * 
     * @return A string
     */
-   std::string toString() const;
+   virtual std::string toString() const;
 
 protected:
    /**

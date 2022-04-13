@@ -2,8 +2,8 @@
 // Created by cfont on 13.04.2022.
 //
 
-#ifndef POA_LABO2_SQUADRONS_TESTSLINKEDLIST_H
-#define POA_LABO2_SQUADRONS_TESTSLINKEDLIST_H
+#ifndef POA_LABO2_SQUADRONS_TESTSLINKEDLIST_HPP
+#define POA_LABO2_SQUADRONS_TESTSLINKEDLIST_HPP
 
 #include "../LinkedList/LinkedList.hpp"
 #include "TestsUtils.h"
@@ -38,4 +38,6 @@ void iteratorElementsNotEqualTest();
 
 void findElementTest();
 
-#endif //POA_LABO2_SQUADRONS_TESTSLINKEDLIST_H
+void findElementNotInListsTest();
+
+#endif //POA_LABO2_SQUADRONS_TESTSLINKEDLIST_HPP
