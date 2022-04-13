@@ -19,6 +19,7 @@ int main() {
    iteratorAfterIncrementTest();
    iteratorElementsEqualTest();
    iteratorElementsNotEqualTest();
+   findElementTest();
 
    return 0;
 }

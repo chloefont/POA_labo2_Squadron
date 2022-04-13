@@ -241,3 +241,16 @@ void iteratorElementsNotEqualTest() {
     printResults("iterator elements not equal", to_string(expected), to_string(got),
     testPassed);
 }
+
+void findElementTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    bool expected = true;
+    bool got = list.isIn(6);
+    bool testPassed = expected == got;
+
+    printResults("isIn element", to_string(expected), to_string(got), testPassed);
+}

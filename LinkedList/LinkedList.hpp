@@ -42,6 +42,8 @@ public:
 
    bool empty() const noexcept;
 
+   bool isIn(T value);
+
 private:
    struct Node {
       T value;
@@ -170,5 +172,19 @@ void LinkedList<T>::pushBack(T value) {
    current->next = newNode;
    size++;
 }
+
+template<typename T>
+bool LinkedList<T>::isIn(T value) {
+   Node *current = &beforeFirst;
+
+   while (current->next != nullptr) {
+      if (current->next->value == value) {
+         return true;
+      }
+      current = current->next;
+   }
+   return false;
+}
+
 
 #endif //POA_LABO2_SQUADRONS_LINKEDLIST_HPP

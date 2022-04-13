@@ -36,4 +36,6 @@ void iteratorElementsEqualTest();
 
 void iteratorElementsNotEqualTest();
 
+void findElementTest();
+
 #endif //POA_LABO2_SQUADRONS_TESTSLINKEDLIST_H
