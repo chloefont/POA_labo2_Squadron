@@ -81,3 +81,52 @@ void getElementWithValidIndexTest() {
     printResults("get element with valid index", to_string(expected), to_string
     (got), testPassed);
 }
+
+void getElementWithInvalidIndexTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    string expected = "Index out of bounds";
+    string got;
+   bool testPassed = false;
+
+    try {
+       got = to_string(list.get(7));
+    } catch (const out_of_range &e) {
+        testPassed = true;
+        got = e.what();
+    }
+
+    printResults("get element with invalid index", expected, got, testPassed);
+}
+
+void getSizeTest() {
+    LinkedList<int> list;
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+    list.pushFront(1);
+    list.pushFront(3);
+    list.pushFront(6);
+
+    size_t expected = 6;
+    size_t got = list.getSize();
+    bool testPassed = expected == got;
+
+    printResults("get size", to_string(expected), to_string(got), testPassed);
+}
+
+void emptyTest() {
+    LinkedList<int> list;
+
+    bool expected = true;
+    bool got = list.empty();
+    bool testPassed = expected == got;
+
+    printResults("empty", to_string(expected), to_string(got), testPassed);
+}

@@ -19,7 +19,7 @@ public:
     * @param cargoWeight The weight of the cargo in the shuttle.
     * @param nickname The name of the shuttle.
     */
-   Shuttle(double cargoWeight = 0, const std::string &nickname = "");
+   Shuttle(double cargoWeight = 0, std::string nickname = "");
 
    /**
     * Return the model of the shuttle.
