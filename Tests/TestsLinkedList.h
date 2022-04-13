@@ -8,7 +8,11 @@
 #include "../LinkedList/LinkedList.hpp"
 #include "TestsUtils.h"
 
+void CopyConstructorTest();
+
 void pushFrontTest();
+
+void pushBackTest();
 
 void removeIfExistsTest();
 

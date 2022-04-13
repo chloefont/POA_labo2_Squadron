@@ -16,6 +16,20 @@ string listToString(const LinkedList<int> &list) {
     return result;
 }
 
+void CopyConstructorTest() {
+    LinkedList<int> list1;
+    list1.pushFront(1);
+    list1.pushFront(2);
+    list1.pushFront(3);
+    LinkedList<int> list2(list1);
+
+   string expected = "3 2 1 ";
+   string got = listToString(list2);
+   bool testOk = expected.compare(got) == 0;
+
+   printResults("copy constructor", expected, got, testOk);
+}
+
 void pushFrontTest() {
    LinkedList<int> list;
    list.pushFront(1);
@@ -27,6 +41,19 @@ void pushFrontTest() {
    bool testPassed = expected.compare(got) == 0;
 
    printResults("push front", expected, got, testPassed);
+}
+
+void pushBackTest() {
+   LinkedList<int> list;
+   list.pushFront(1);
+   list.pushFront(3);
+   list.pushFront(6);
+
+   string expected = "6 3 1 ";
+   string got = listToString(list);
+   bool testPassed = expected.compare(got) == 0;
+
+   printResults("push back", expected, got, testPassed);
 }
 
 void removeIfExistsTest() {

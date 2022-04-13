@@ -1,7 +1,3 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #ifndef POA_LABO2_SQUADRONS_SQUADRON_HPP
 #define POA_LABO2_SQUADRONS_SQUADRON_HPP
 

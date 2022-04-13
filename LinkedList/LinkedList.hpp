@@ -24,7 +24,11 @@ public:
 
    LinkedList(const LinkedList &other);
 
+   ~LinkedList();
+
    void pushFront(T value);
+
+   void pushBack(T value);
 
    void remove(T value);
 
@@ -58,6 +62,8 @@ void LinkedList<T>::pushFront(T value) {
    size++;
 }
 
+
+
 template<typename T>
 void LinkedList<T>::remove(T value) {
    Node *current = beforeFirst.next;
@@ -78,10 +84,10 @@ void LinkedList<T>::remove(T value) {
 }
 
 template<typename T>
-LinkedList<T>::LinkedList(const LinkedList &other) {
+LinkedList<T>::LinkedList(const LinkedList &other) : beforeFirst{T(), nullptr}, size(0) {
    Node *current = other.beforeFirst.next;
    while (current != nullptr) {
-      pushFront(current->value);
+      pushBack(current->value);
       current = current->next;
    }
 }
@@ -138,6 +144,31 @@ Iterator<T> LinkedList<T>::end() const noexcept {
 template<typename T>
 bool LinkedList<T>::empty() const noexcept {
    return begin() == end();
+}
+
+template<typename T>
+LinkedList<T>::~LinkedList() {
+   Node *current = beforeFirst.next;
+
+   while (current != nullptr) {
+      Node *tmp = current;
+      current = current->next;
+      delete tmp;
+   }
+}
+
+template<typename T>
+void LinkedList<T>::pushBack(T value) {
+   Node* newNode = new Node{value, nullptr};
+
+   Node* current = &beforeFirst;
+
+   while (current->next != nullptr) {
+      current = current->next;
+   }
+
+   current->next = newNode;
+   size++;
 }
 
 #endif //POA_LABO2_SQUADRONS_LINKEDLIST_HPP
