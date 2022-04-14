@@ -23,6 +23,7 @@ int main() {
    iteratorElementsNotEqualTest();
    findElementTest();
    findElementNotInListsTest();
+   endOnEmptyListTest();
 
    cout << endl << "------ Ships Tests" << endl;
 

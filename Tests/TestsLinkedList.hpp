@@ -40,4 +40,6 @@ void findElementTest();
 
 void findElementNotInListsTest();
 
+void endOnEmptyListTest();
+
 #endif //POA_LABO2_SQUADRONS_TESTSLINKEDLIST_HPP

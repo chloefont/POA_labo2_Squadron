@@ -267,3 +267,16 @@ void findElementNotInListsTest() {
 
    printResults("isIn element", to_string(expected), to_string(got), testPassed);
 }
+
+void endOnEmptyListTest() {
+    LinkedList<int> list;
+
+    Iterator<int> it = list.end();
+
+    bool expected = true;
+    bool got = it == list.begin();
+    bool testPassed = expected == got;
+
+    printResults("end on empty list", to_string(expected), to_string(got),
+    testPassed);
+}
