@@ -205,7 +205,7 @@ Iterator<T> LinkedList<T>::end() const noexcept {
 
 template<typename T>
 bool LinkedList<T>::empty() const noexcept {
-   return begin() == end();
+   return size == 0;
 }
 
 template<typename T>
