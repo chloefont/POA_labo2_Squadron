@@ -1,7 +1,3 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #ifndef POA_LABO2_SQUADRONS_SHUTTLE_HPP
 #define POA_LABO2_SQUADRONS_SHUTTLE_HPP
 
@@ -10,6 +6,13 @@
 #include <string>
 #include "Cargo.hpp"
 
+
+/**
+ * Class that represents a shuttle cargo.
+ *
+ * @authors Luca Coduri & Chloé Fontaine
+ * @date 2022/04/14
+ */
 class Shuttle : public Cargo {
 public:
    /**

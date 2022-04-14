@@ -13,6 +13,12 @@ Squadron operator-(const Squadron &squad, const Squadron &ship);
 
 std::ostream &operator<<(std::ostream &os, const Squadron &squad);
 
+/**
+ * A class that represents a squadron of ships.
+ *
+ * @authors Luca Coduri & Chloé Fontaine
+ * @date 2022/04/14
+ */
 class Squadron {
 public:
    friend Squadron operator+(const Squadron &squad, const Ship &ship);
@@ -110,10 +116,22 @@ public:
     */
    void removeLeader();
 
+   /**
+    * Returns the size of the squadron.
+    * @return The size of the squadron.
+    */
    size_t getSize() const;
 
+   /**
+    * Returns the name of the squadron.
+    * @return name of the squadron
+    */
    std::string getName() const;
 
+   /**
+    * Returns the leader of the squadron.
+    * @return The leader of the squadron or a null pointer if ther is none.
+    */
    Ship* getLeader() const;
 
 private:

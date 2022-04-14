@@ -1,7 +1,3 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #ifndef POA_LABO2_SQUADRONS_STARDREADNOUGHT_HPP
 #define POA_LABO2_SQUADRONS_STARDREADNOUGHT_HPP
 
@@ -10,6 +6,12 @@
 #include <string>
 #include "Cargo.hpp"
 
+/**
+ * Class that represents a StarDreadnought cargo.
+ *
+ * @authors Luca Coduri & Chloé Fontaine
+ * @date 2022/04/14
+ */
 class StarDreadnought : public Cargo {
 public:
 
@@ -36,6 +38,11 @@ public:
     */
    double getWeight() const override;
 
+   /**
+    * It returns the maximum weight of the cargo.
+    *
+    * @return The maximum weight of the cargo.
+    */
    double getCargoMaxWeight() const override;
 
 private:

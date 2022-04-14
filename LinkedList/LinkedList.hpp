@@ -13,6 +13,13 @@
 template<typename T>
 std::ostream &operator<<(std::ostream &os, const LinkedList<T> &list);
 
+/**
+ * A linked list implementation.
+ *
+ * @tparam T type of the elements in the list
+ * @authors Luca Coduri & Chloé Fontaine
+ * @date 2022/04/14
+ */
 template<typename T>
 class LinkedList {
 public:

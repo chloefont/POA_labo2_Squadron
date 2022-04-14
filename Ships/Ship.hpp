@@ -1,7 +1,3 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #ifndef POA_LABO2_SQUADRONS_SHIP_HPP
 #define POA_LABO2_SQUADRONS_SHIP_HPP
 
@@ -11,6 +7,12 @@ class Ship;
 
 std::ostream &operator<<(std::ostream &os, const Ship &ship);
 
+/**
+ * Class that represents a ship that have an id and a speed.
+ *
+ * @authors Luca Coduri & Chloé Fontaine
+ * @date 2022/04/14
+ */
 class Ship {
 
 public:
@@ -40,6 +42,11 @@ public:
     */
    double getSpeed() const;
 
+   /**
+    * It returns the nickname of the ship.
+    *
+    * @return The nickname of the ship.
+    */
    virtual std::string getModel() const = 0;
 
    virtual double getWeight() const = 0;
@@ -51,6 +58,11 @@ public:
     */
    void setNickname(std::string nickname);
 
+   /**
+    * It returns the nickname of the ship.
+    *
+    * @return The nickname of the ship.
+    */
    std::string getNickname() const;
 
    /**

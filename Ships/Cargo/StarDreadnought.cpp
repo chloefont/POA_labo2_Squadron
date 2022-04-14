@@ -1,9 +1,4 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #include "StarDreadnought.hpp"
-#include "limits"
 
 using namespace std;
 

@@ -1,7 +1,3 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #ifndef POA_LABO2_SQUADRONS_HUNTERTIE_HPP
 #define POA_LABO2_SQUADRONS_HUNTERTIE_HPP
 
@@ -10,6 +6,12 @@
 #include <string>
 #include "Ship.hpp"
 
+/**
+ * Class that represents a Hunter TIE ship.
+ *
+ * @authors Luca Coduri & Chloé Fontaine
+ * @date 2022/04/14
+ */
 class HunterTIE : public Ship {
 public:
    /**

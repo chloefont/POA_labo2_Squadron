@@ -1,7 +1,3 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #include "HunterTIE.hpp"
 
 using namespace std;

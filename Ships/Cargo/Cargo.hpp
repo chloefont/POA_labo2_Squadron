@@ -1,13 +1,15 @@
-//
-// Created by cfont on 24.03.2022.
-//
-
 #ifndef POA_LABO2_SQUADRONS_CARGO_HPP
 #define POA_LABO2_SQUADRONS_CARGO_HPP
 
 #include "../Ship.hpp"
 
-
+/**
+ * Class that represents a cargo ship which can have an additional weight for his
+ * cargo.
+ *
+ * @authors Luca Coduri & Chloé Fontaine
+ * @date 2022/04/14
+ */
 class Cargo : public Ship {
 public:
 
